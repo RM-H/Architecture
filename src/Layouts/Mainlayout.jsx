@@ -5,7 +5,7 @@ import {Nav} from '../components'
 const Mainlayout = () => {
   return(
       <>
-          <div style={{height:'100dvh', backgroundColor:'red'}}>
+          <div className='main-layout'>
 
               <Nav/>
 

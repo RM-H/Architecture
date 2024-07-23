@@ -1,5 +1,5 @@
 /*------------------*/
-/*   Animations    */
+/*   fonts    */
 /*-----------------*/
 
 @font-face {
@@ -7,10 +7,85 @@
     src: url("/asset/fonts/Kook-Regular.ttf");
 }
 
-body {
-    font-family: 'kook';
+.kook {
+    font-family: 'kook' !important;
 }
 
+body {
+    font-family: 'kook';
+
+}
+
+/*----------------*/
+/*  core           */
+/*----------------*/
+
+
+.main-layout {
+    height: 100dvh;
+    width: 100dvw;
+}
+.columns {
+    margin: 0;
+}
+
+.navbar {
+    position: fixed;
+    backdrop-filter: blur(0.1rem);
+}
+
+
+
+/*----------------*/
+/*  backgrounds     */
+/*----------------*/
+.header{
+    height: 81dvh;
+    background-image: url('/asset/images/1.jpg');
+    background-size: cover;
+
+    position: relative;
+
+    background-attachment: fixed;
+}
+
+.shape{
+    position: absolute;
+    height: 21%;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+
+:root{
+
+    --clrone: #0C145E;
+    --clrtwo: #ffffff;
+
+    --clrthree: hsl(26.37deg 99.2% 49.02%);
+    --clrfour:rgb(102 102 102 / 54%);
+}
+
+
+/*----------------*/
+/*  backgroudcolors */
+/*----------------*/
+
+
+.bgclrone {
+    background-color: var(--clrone);
+}
+.bgclrtwo{
+    background-color: var(--clrtwo);
+}
+.bgclrthree {
+    background-color: var(--clrthree);
+}
+.bgclrfour {
+    background-color: var(--clrfour);
+}
 
 /*----------------*/
 /*  Animations    */

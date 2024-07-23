@@ -138,7 +138,7 @@ const Navbar = (props) => {
             <header>
 
 
-                <nav className="navbar is-justify-content-center pb-0 "
+                <nav className="navbar bgclrfour is-justify-content-center pb-0 "
                      role="navigation"
                      aria-label="main navigation" style={{width: '100%'}}
                 >

@@ -2,13 +2,18 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Mainlayout from './Layouts/Mainlayout.jsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {Landing} from './Pages'
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/:lang/',
         element: <Mainlayout/>,
         // errorElement:<Errorpage/>,
         children: [
+            {
+                path:'/:lang/' ,
+                element: <Landing/>
+            }
 
 
 
