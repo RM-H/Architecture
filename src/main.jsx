@@ -1,29 +1,31 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import ReactDOM from 'react-dom/client'
 import Mainlayout from './Layouts/Mainlayout.jsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {Landing} from './Pages'
+import {Landing, Register} from './Pages'
+
 
 const router = createBrowserRouter([
     {
-        path: '/:lang/',
+        path: '/',
         element: <Mainlayout/>,
         // errorElement:<Errorpage/>,
         children: [
             {
-                path:'/:lang/' ,
+                path: '/',
                 element: <Landing/>
+            },
+            {
+                path: '/register/',
+                element: <Register/>
             }
 
 
-
-
-        ] ,
+        ],
 
     }
 
 ])
-
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
