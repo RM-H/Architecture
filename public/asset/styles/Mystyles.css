@@ -1,0 +1,9 @@
+
+@font-face {
+    font-family: 'kook';
+    src: url("/asset/fonts/Kook-Regular.ttf");
+}
+
+body  {
+    font-family: 'kook';
+}
