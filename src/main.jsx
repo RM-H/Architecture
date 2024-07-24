@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import Mainlayout from './Layouts/Mainlayout.jsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {Landing, Register} from './Pages'
-
+import 'animate.css';
 
 const router = createBrowserRouter([
     {

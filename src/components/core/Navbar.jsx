@@ -138,7 +138,7 @@ const Navbar = (props) => {
             <header>
 
 
-                <nav className="navbar bgclrfour is-justify-content-center pb-0 "
+                <nav className="navbar bgclrfive is-justify-content-center pb-0 "
                      role="navigation"
                      aria-label="main navigation" style={{width: '100%'}}
                 >
@@ -198,7 +198,7 @@ const Navbar = (props) => {
                                 }}
                                       className={`navbar-item is-hidden-mobile is-hidden-touch underline px-0 ${activePage === 0 && 'navactive'}`}
                                       style={{alignItems: 'center'}}>
-                                    <img src="/asset/icons/logo.png" width={150} height={50}
+                                    <img src="/asset/icons/logo.png"
                                          style={{maxHeight: '55px'}}/>
 
 
@@ -210,14 +210,14 @@ const Navbar = (props) => {
 
 
                                 <div className='is-flex is-flex-direction-row is-hidden-touch '>
-                                    <Link title='خرید آنلاین بلیت کنسرت' to={'/concerts/'} onClick={() => {
+                                    <Link title='خرید آنلاین بلیت کنسرت' to={'/'} onClick={() => {
 
                                         handleActivePage(1)
                                     }
                                     }
                                           className={`navbar-item  underline ${activePage === 1 && 'navactive'}`}>
                                         <MusicNoteOutlined/>
-                                        بلیت کنسرت
+                                       صفحه اصلی
                                     </Link>
                                     <Link title='خرید آنلاین بلیت همایش' to={'/conference/'} onClick={() => {
 
@@ -250,13 +250,13 @@ const Navbar = (props) => {
                                     </Link>
 
 
-                                    <Link title='پیگیری خرید بلیط با کد رهگیری' to={'/inquiry/'} onClick={() => {
+                                    <Link title='پیگیری خرید بلیط با کد رهگیری' to={'/register/'} onClick={() => {
 
                                         handleActivePage(5)
                                     }}
                                           className={`navbar-item  underline ${activePage === 5 && 'navactive'}`}>
                                         <ManageSearchOutlined/>
-                                        پیگیری خرید
+                                       ثبت نام استادکاران
                                     </Link>
 
 

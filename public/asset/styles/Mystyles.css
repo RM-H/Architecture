@@ -21,12 +21,23 @@ body {
 /*----------------*/
 
 
+.paddingx {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+
 .main-layout {
     height: 100dvh;
     width: 100dvw;
 }
+
 .columns {
     margin: 0;
+}
+
+.column {
+    padding: 0;
 }
 
 .navbar {
@@ -39,11 +50,10 @@ body {
 }
 
 
-
 /*----------------*/
 /*  backgrounds     */
 /*----------------*/
-.header{
+.header {
     height: 81dvh;
     background-image: url('/asset/images/1.jpg');
     background-size: cover;
@@ -53,7 +63,7 @@ body {
     background-attachment: fixed;
 }
 
-.shape{
+.shape {
     position: absolute;
     height: 21%;
     width: 100%;
@@ -62,14 +72,20 @@ body {
     left: 0;
 }
 
+.shape-reverse {
+    transform: rotateX(180deg);
+}
 
-:root{
+
+:root {
 
     --clrone: #0C145E;
     --clrtwo: #ffffff;
 
     --clrthree: hsl(26.37deg 99.2% 49.02%);
-    --clrfour:rgb(102 102 102 / 54%);
+    --clrfour: rgb(102 102 102 / 54%);
+    --clrfive: rgba(255, 255, 255, 0.81);
+    --clrsix: #31C1A0;
 }
 
 
@@ -81,14 +97,33 @@ body {
 .bgclrone {
     background-color: var(--clrone);
 }
-.bgclrtwo{
+
+.bgclrtwo {
     background-color: var(--clrtwo);
 }
+
+.textclrtwo {
+    color: var(--clrtwo);
+}
+
 .bgclrthree {
     background-color: var(--clrthree);
 }
+
 .bgclrfour {
     background-color: var(--clrfour);
+}
+
+.bgclrfive {
+    background-color: var(--clrfive);
+}
+
+.bgclrsix {
+    background-color: var(--clrsix);
+}
+
+.textclrsix {
+    color: var(--clrsix);
 }
 
 /*----------------*/
@@ -99,7 +134,7 @@ body {
 .underline {
     &::after {
         content: "";
-        border-bottom: solid 0.1618rem #601FEB;
+        border-bottom: solid 0.1618rem var(--clrsix);
 
         position: absolute;
         bottom: 0;
@@ -125,4 +160,61 @@ body {
             transform: scaleX(1);
         }
     }
+}
+
+
+/*----------------*/
+/*  Borders    */
+/*----------------*/
+
+
+.shadowone {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.borderradone {
+    border-radius: 0.3rem;
+}
+
+
+.borderbotblack {
+    border-bottom: 3px solid var(--clrsix);
+}
+.borderclrsix {
+    border: 1px solid var(--clrsix);
+}
+
+
+/*----------------*/
+/*  misc    */
+/*----------------*/
+
+.abilities-content__img {
+    width: 50%;
+    height: 100%;
+}
+.our-project__img{
+    height: 50%;
+    width: 100%;
+}
+
+.our-project__content-box{
+    height: 50%;
+    width: 100%;
+    padding: 3rem;
+}
+
+.our-services {
+    min-height: 81dvh;
+    background: url("/asset/images/2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.how-it-work__box-item{
+    flex-grow: 1;
+    padding: 3rem;
+    background-color: var(--clrtwo);
 }
