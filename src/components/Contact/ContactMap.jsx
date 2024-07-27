@@ -9,7 +9,7 @@ const ContactMap = () => {
     return (
         <>
 
-            <div className='column is-12 mt-5 container shadowone borderclrsix borderradtwo' style={{height: '50rem'}}>
+            <div className='column is-12 mt-5 container shadowone borderclrsix borderradtwo' style={{height: '16.18rem'}}>
 
 
                 <MapContainer ref={mapRef} className='shadowtwo' center={position} zoom={11.6} scrollWheelZoom={false}
