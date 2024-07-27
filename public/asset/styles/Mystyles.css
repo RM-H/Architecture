@@ -84,7 +84,7 @@ body {
 
     --clrthree: hsl(26.37deg 99.2% 49.02%);
     --clrfour: rgb(102 102 102 / 54%);
-    --clrfive: rgba(255, 255, 255, 0.81);
+    --clrfive: rgba(255, 255, 255, 0.9);
     --clrsix: #31C1A0;
 }
 
@@ -96,6 +96,10 @@ body {
 
 .bgclrone {
     background-color: var(--clrone);
+}
+
+.textclrone {
+    color: var(--clrone);
 }
 
 .bgclrtwo {
@@ -129,6 +133,13 @@ body {
 /*----------------*/
 /*  Animations    */
 /*----------------*/
+
+
+.footerhover :hover {
+    color: var(--clrthree);
+    transition: 0.3s;
+
+}
 
 
 .underline {
@@ -181,8 +192,13 @@ body {
 .borderbotblack {
     border-bottom: 3px solid var(--clrsix);
 }
+
 .borderclrsix {
     border: 1px solid var(--clrsix);
+}
+
+.borderclrthree {
+    border-bottom: 3px solid var(--clrthree);
 }
 
 
@@ -190,16 +206,26 @@ body {
 /*  misc    */
 /*----------------*/
 
+
+.banner {
+    min-height: 10rem;
+    width: 66%;
+    margin-top: 15rem;
+    background-color: rgb(102 102 102 / 60%);
+    backdrop-filter: blur(0.3rem);
+}
+
 .abilities-content__img {
     width: 50%;
     height: 100%;
 }
-.our-project__img{
+
+.our-project__img {
     height: 50%;
     width: 100%;
 }
 
-.our-project__content-box{
+.our-project__content-box {
     height: 50%;
     width: 100%;
     padding: 3rem;
@@ -213,7 +239,7 @@ body {
     background-attachment: fixed;
 }
 
-.how-it-work__box-item{
+.how-it-work__box-item {
     flex-grow: 1;
     padding: 3rem;
     background-color: var(--clrtwo);

@@ -2,12 +2,15 @@ import {Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, Typogr
 import {useNavigate, Link} from "react-router-dom";
 import {useState} from "react";
 import {
-    ArchiveOutlined,
-    EventSeatOutlined,
-    ManageSearchOutlined,
+
+    AppRegistration,
+
     Menu,
-    MusicNoteOutlined,
-    TheaterComedyOutlined
+
+    Home,
+    Category,
+    Article,
+    Contacts
 } from "@mui/icons-material";
 
 
@@ -38,7 +41,7 @@ const Navbar = (props) => {
                 nav('/');
                 handleActivePage(0)
                 handleDrawerToggle()
-            }} className='pinar' variant="h6" sx={{my: 2}}>
+            }} className='kook has-text-weight-bold textclrone' variant="h6" sx={{my: 2}}>
                 خانه
             </Typography>
 
@@ -47,7 +50,7 @@ const Navbar = (props) => {
 
             <List sx={{
                 '& .Mui-selected': {
-                    border: '0.15rem dashed #601FEB',
+                    border: '0.15rem dashed #31C1A0',
                     borderRadius: '0.5rem',
                     backgroundColor: '#ffffff',
                     mx: 1,
@@ -58,70 +61,49 @@ const Navbar = (props) => {
 
                 <ListItem onClick={handleDrawerToggle} disablePadding>
                     <ListItemButton selected={activePage === 1} onClick={() => {
-                        nav('/concerts/');
+                        nav('/');
                         handleActivePage(1)
                     }}
                                     sx={{textAlign: 'center', height: '3rem'}}>
-                        <Typography className='pinar' variant="h6" sx={{my: 2}}>
-                            بلیت کنسرت
+                        <Typography className='kook' variant="h6" sx={{my: 2}}>
+                           خدمات ما
                         </Typography>
                     </ListItemButton>
                 </ListItem>
 
                 <ListItem onClick={handleDrawerToggle} disablePadding>
                     <ListItemButton selected={activePage === 2} onClick={() => {
-                        nav('/conference/');
+                        nav('/');
                         handleActivePage(2)
                     }}
                                     sx={{textAlign: 'center', height: '3rem'}}>
-                        <Typography className='pinar' variant="h6" sx={{my: 2}}>
-                            بلیت همایش
+                        <Typography className='kook' variant="h6" sx={{my: 2}}>
+                            بلاگ
                         </Typography>
                     </ListItemButton>
                 </ListItem>
 
                 <ListItem onClick={handleDrawerToggle} disablePadding>
                     <ListItemButton selected={activePage === 3} onClick={() => {
-                        nav('/theatre/');
+                        nav('/');
                         handleActivePage(3)
                     }} sx={{textAlign: 'center', height: '3rem'}}>
-                        <Typography className='pinar' variant="h6" sx={{my: 2}}>
-                            بلیت تئاتر
+                        <Typography className='kook' variant="h6" sx={{my: 2}}>
+                           ارتباط با ما
                         </Typography>
                     </ListItemButton>
                 </ListItem>
                 <ListItem onClick={handleDrawerToggle} disablePadding>
                     <ListItemButton selected={activePage === 4} onClick={() => {
-                        nav('/live/');
+                        nav('/register/');
                         handleActivePage(4)
                     }} sx={{textAlign: 'center', height: '3rem'}}>
-                        <Typography className='pinar' variant="h6" sx={{my: 2}}>
-                            آرشیو ویدیویی
+                        <Typography className='kook' variant="h6" sx={{my: 2}}>
+                           ثبت نام استادکاران
                         </Typography>
                     </ListItemButton>
                 </ListItem>
 
-                <ListItem onClick={handleDrawerToggle} disablePadding>
-                    <ListItemButton selected={activePage === 5} onClick={() => {
-                        nav('/inquiry/');
-                        handleActivePage(5)
-                    }} sx={{textAlign: 'center', height: '3rem'}}>
-                        <Typography className='pinar' variant="h6" sx={{my: 2}}>
-                            پیگیری خرید
-                        </Typography>
-                    </ListItemButton>
-                </ListItem>
-
-                <ListItem onClick={handleDrawerToggle} disablePadding>
-                    <ListItemButton selected={activePage === 6} onClick={() => {
-                        nav('/contact/');
-                        handleActivePage(6)
-                    }} sx={{textAlign: 'center', height: '3rem'}}>
-                        <Typography className='pinar' variant="h6" sx={{my: 2}}>
-                            تماس با ما
-                        </Typography>
-                    </ListItemButton>
-                </ListItem>
 
 
             </List>
@@ -162,7 +144,7 @@ const Navbar = (props) => {
                                     width: drawerWidth,
                                     backgroundColor: 'rgba(255,254,254,0.9)',
                                     backdropFilter: 'blur(0.3rem)',
-                                    borderLeft: '0.4rem solid #601FEB'
+                                    borderLeft: '0.4rem solid #31C1A0'
                                 },
                             }}
                         >
@@ -188,7 +170,7 @@ const Navbar = (props) => {
                                 >
                                     <Menu/>
                                     {/*responsive logo*/}
-                                    <img className='mr-1' src="/images/head-logo.svg" width={40} height={30} alt=""/>
+                                    <img className='mr-1' src="/asset/icons/logo.png" width={40} height={30} alt=""/>
                                 </IconButton>
 
 
@@ -216,37 +198,37 @@ const Navbar = (props) => {
                                     }
                                     }
                                           className={`navbar-item  underline ${activePage === 1 && 'navactive'}`}>
-                                        <MusicNoteOutlined/>
-                                       صفحه اصلی
+                                        <Home/>
+                                       خانه
                                     </Link>
-                                    <Link title='خرید آنلاین بلیت همایش' to={'/conference/'} onClick={() => {
+                                    <Link title='خرید آنلاین بلیت همایش' to={'/'} onClick={() => {
 
                                         handleActivePage(2)
                                     }
                                     }
                                           className={`navbar-item  underline ${activePage === 2 && 'navactive'}`}>
-                                        <EventSeatOutlined/>
-                                        بلیت همایش
+                                        <Category/>
+                                       خدمات ما
                                     </Link>
-                                    <Link title='خرید آنلاین بلیت تئاتر' to={'/theatre/'} onClick={() => {
+                                    <Link title='خرید آنلاین بلیت تئاتر' to={'/'} onClick={() => {
 
                                         handleActivePage(3)
                                     }
                                     }
                                           className={`navbar-item  underline ${activePage === 3 && 'navactive'}`}>
-                                        <TheaterComedyOutlined/>
-                                        بلیت تئاتر
+                                        <Article/>
+                                        وبلاگ
                                     </Link>
 
 
                                     <Link title='آرشیو ویدئویی برنامه های سایت بیلیتیم
-                                    ' to={'/live/'} onClick={() => {
+                                    ' to={'/'} onClick={() => {
 
                                         handleActivePage(4)
                                     }}
                                           className={`navbar-item  underline ${activePage === 4 && 'navactive'}`}>
-                                        <ArchiveOutlined/>
-                                        آرشیو ویدیویی
+                                        <Contacts/>
+                                       ارتباط با ما
                                     </Link>
 
 
@@ -255,7 +237,7 @@ const Navbar = (props) => {
                                         handleActivePage(5)
                                     }}
                                           className={`navbar-item  underline ${activePage === 5 && 'navactive'}`}>
-                                        <ManageSearchOutlined/>
+                                        <AppRegistration/>
                                        ثبت نام استادکاران
                                     </Link>
 

@@ -1,5 +1,5 @@
 import {Button} from '@mui/material';
-import {QuestionAnswer,EditCalendar,Map,HomeWork} from '@mui/icons-material'
+import {QuestionAnswer, EditCalendar, Map, HomeWork} from '@mui/icons-material'
 
 
 const Landing = () => {
@@ -8,9 +8,19 @@ const Landing = () => {
             <main>
 
 
-                <div className="columns is-multiline m-0 is-justify-content-center">
+                <div className="columns is-multiline m-0 pb-4 is-justify-content-center ">
 
                     <div className="column is-12 header">
+
+
+                        <div className="bgclrsix textclrtwo mx-auto banner is-flex is-justify-content-center is-align-items-center borderradone shadowone">
+                            <p className='is-size-4 has-text-weight-bold'>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است
+                            </p>
+                        </div>
+
+
                         <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="100%"
                              viewBox="0 0 1600 172" className="shape">
                             <path style={{fill: "rgba(255, 255, 255, 0.24)"}}
@@ -194,8 +204,8 @@ const Landing = () => {
 
                     </div>
 
-                    <div className='column is-12'>
-                        <div className='bgclrone py-3' >
+                    <div className='column is-12 mb-6'>
+                        <div className='bgclrone py-3'>
                             <p className="is-size-4 textclrsix has-text-centered">
                                 ماچگونه کار میکنیم ؟
                             </p>
