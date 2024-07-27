@@ -7,7 +7,7 @@ const Footer = () => {
         <>
             <footer className="w100 bgclrone textclrtwo mt-6" style={{minHeight: "15rem"}}>
                 <div
-                    className='bgclrsix px-3 mx-auto borderradone shadowone is-flex is-align-items-center is-justify-content-center'
+                    className='bgclrsix px-3 mx-auto borderradtwo shadowone is-flex is-align-items-center is-justify-content-center'
                     style={{width: '66%', minHeight: '6rem', transform: 'translateY(-4rem)'}}>
 
                     <p className='is-size-3 has-text-weight-bold w100 has-text-centered'>

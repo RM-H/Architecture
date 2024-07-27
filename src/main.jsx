@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import ReactDOM from 'react-dom/client'
 import Mainlayout from './Layouts/Mainlayout.jsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {Landing, Register} from './Pages'
+import {Contact, Landing, Register} from './Pages'
 import 'animate.css';
 
 const router = createBrowserRouter([
@@ -18,6 +18,10 @@ const router = createBrowserRouter([
             {
                 path: '/register/',
                 element: <Register/>
+            } ,
+            {
+                path: '/contact/',
+                element: <Contact/>
             }
 
 

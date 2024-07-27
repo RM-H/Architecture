@@ -71,21 +71,21 @@ const Navbar = (props) => {
                     </ListItemButton>
                 </ListItem>
 
-                <ListItem onClick={handleDrawerToggle} disablePadding>
-                    <ListItemButton selected={activePage === 2} onClick={() => {
-                        nav('/');
-                        handleActivePage(2)
-                    }}
-                                    sx={{textAlign: 'center', height: '3rem'}}>
-                        <Typography className='kook' variant="h6" sx={{my: 2}}>
-                            بلاگ
-                        </Typography>
-                    </ListItemButton>
-                </ListItem>
+                {/*<ListItem onClick={handleDrawerToggle} disablePadding>*/}
+                {/*    <ListItemButton selected={activePage === 2} onClick={() => {*/}
+                {/*        nav('/');*/}
+                {/*        handleActivePage(2)*/}
+                {/*    }}*/}
+                {/*                    sx={{textAlign: 'center', height: '3rem'}}>*/}
+                {/*        <Typography className='kook' variant="h6" sx={{my: 2}}>*/}
+                {/*            بلاگ*/}
+                {/*        </Typography>*/}
+                {/*    </ListItemButton>*/}
+                {/*</ListItem>*/}
 
                 <ListItem onClick={handleDrawerToggle} disablePadding>
                     <ListItemButton selected={activePage === 3} onClick={() => {
-                        nav('/');
+                        nav('/contact/');
                         handleActivePage(3)
                     }} sx={{textAlign: 'center', height: '3rem'}}>
                         <Typography className='kook' variant="h6" sx={{my: 2}}>
@@ -210,19 +210,19 @@ const Navbar = (props) => {
                                         <Category/>
                                        خدمات ما
                                     </Link>
-                                    <Link title='خرید آنلاین بلیت تئاتر' to={'/'} onClick={() => {
+                                    {/*<Link title='خرید آنلاین بلیت تئاتر' to={'/'} onClick={() => {*/}
 
-                                        handleActivePage(3)
-                                    }
-                                    }
-                                          className={`navbar-item  underline ${activePage === 3 && 'navactive'}`}>
-                                        <Article/>
-                                        وبلاگ
-                                    </Link>
+                                    {/*    handleActivePage(3)*/}
+                                    {/*}*/}
+                                    {/*}*/}
+                                    {/*      className={`navbar-item  underline ${activePage === 3 && 'navactive'}`}>*/}
+                                    {/*    <Article/>*/}
+                                    {/*    وبلاگ*/}
+                                    {/*</Link>*/}
 
 
                                     <Link title='آرشیو ویدئویی برنامه های سایت بیلیتیم
-                                    ' to={'/'} onClick={() => {
+                                    ' to={'/contact/'} onClick={() => {
 
                                         handleActivePage(4)
                                     }}

@@ -13,7 +13,7 @@ const Landing = () => {
                     <div className="column is-12 header">
 
 
-                        <div className="bgclrsix textclrtwo mx-auto banner is-flex is-justify-content-center is-align-items-center borderradone shadowone">
+                        <div className="bgclrsix textclrtwo mx-auto banner is-flex is-justify-content-center is-align-items-center borderradone shadowone animate__animated animate__zoomIn">
                             <p className='is-size-4 has-text-weight-bold'>
                                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
                                 است
@@ -204,7 +204,7 @@ const Landing = () => {
 
                     </div>
 
-                    <div className='column is-12 mb-6'>
+                    <div className='column is-12 mb-6 '>
                         <div className='bgclrone py-3'>
                             <p className="is-size-4 textclrsix has-text-centered">
                                 ماچگونه کار میکنیم ؟
@@ -224,7 +224,7 @@ const Landing = () => {
 
 
                         <div
-                            className="container is-column-gap-2 py-3 is-flex is-align-items-center is-justify-content-space-between">
+                            className="container is-column-gap-2 py-3 is-flex is-align-items-center is-justify-content-space-between section-animation">
                             <div className="bgclrtwo shadowone borderclrsix borderradone has-text-centered">
                                 <div className="how-it-work__box-top mb-1 ">
                                     <QuestionAnswer className='is-size-1'/>
