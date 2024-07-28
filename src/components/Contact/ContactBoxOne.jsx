@@ -142,7 +142,7 @@ const ContactBoxOne = () => {
                                             <label className="label has-text-white  is-size-6 ">نام و نام
                                                 خانوادگی</label>
                                             <Field
-                                                className='w100 px-4 has-text-white kook   borderradone is-size-6 has-text-weight-bold'
+                                                className='w100 px-4 has-text-white yekan   borderradone is-size-6 has-text-weight-bold'
                                                 id="name" name="name"
                                                 placeholder=" نام" style={{height: '3rem'}}/>
 
@@ -158,7 +158,7 @@ const ContactBoxOne = () => {
 
                                             <label className="label has-text-white yekan is-size-6">شماره تماس</label>
                                             <Field
-                                                className='w100 px-4 has-text-white kook  borderradone is-size-6 has-text-weight-bold '
+                                                className='w100 px-4 has-text-white yekan  borderradone is-size-6 has-text-weight-bold '
                                                 type='tel' id="phone" name="phone"
                                                 placeholder="0912345678" style={{height: '3rem'}}/>
                                             <ErrorMessage component='span' className='has-text-danger '
@@ -177,7 +177,7 @@ const ContactBoxOne = () => {
                                                 type="text"
                                                 as='textarea'
                                                 rows='5'
-                                                className='w100 px-4 has-text-white kook  borderrad1 is-size-6 has-text-weight-bold'
+                                                className='w100 px-4 has-text-white yekan  borderrad1 is-size-6 has-text-weight-bold'
                                             />
                                             <ErrorMessage component='span' className='has-text-danger yekan'
                                                           name='text'/>
@@ -197,7 +197,7 @@ const ContactBoxOne = () => {
 
                                                         <Button
                                                             variant='contained'
-                                                            className='kook borderradone mt-1 has-text-weight-bold'
+                                                            className='yekan borderradone mt-1 has-text-weight-bold'
                                                             type="submit">ارسال پیام
                                                         </Button>
 

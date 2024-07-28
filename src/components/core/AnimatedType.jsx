@@ -9,7 +9,7 @@ const Animatedtype = () => {
 
     useEffect(() => {
         const typed = new Typed(el.current, {
-            strings: ['ساختمانی',"دکوراسیون", 'معماری' , 'طراحی'],
+            strings: [' ساختمانی'," دکوراسیون", ' معماری' , ' طراحی'],
 
             typeSpeed: 100,
             backSpeed: 0,
@@ -28,7 +28,7 @@ const Animatedtype = () => {
     return (
         <>
 
-            <span className='clronetext' ref={el} />
+            <span className='textclrseven px-3 has-text-weight-bold ' ref={el} />
 
 
 

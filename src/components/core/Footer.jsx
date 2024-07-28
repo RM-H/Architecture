@@ -5,27 +5,42 @@ import {PhoneEnabled, Place} from '@mui/icons-material'
 const Footer = () => {
     return (
         <>
-            <footer className="w100 bgclrone textclrtwo mt-6" style={{minHeight: "15rem"}}>
+            <footer className="w100 bgclrseven textclrtwo " style={{minHeight: "15rem"}}>
+
                 <div
-                    className='bgclrsix px-3 mx-auto borderradtwo shadowone is-flex is-align-items-center is-justify-content-center'
+                    className='bgclreight px-3 mx-auto borderradtwo shadowone is-flex is-align-items-center '
                     style={{width: '66%', minHeight: '6rem', transform: 'translateY(-4rem)'}}>
 
-                    <p className='is-size-3 has-text-weight-bold w100 has-text-centered'>
+                    <img src="/asset/icons/logo-shape.png" alt=""
+                         style={{
+
+
+                             marginRight: 0,
+                             maxHeight: '9rem',
+                             transform: 'translateY(-4.5rem)',
+
+                         }}/>
+
+                    <p className='is-size-3 has-text-weight-bold is-flex is-align-items-center mr-auto ml-auto'
+                    >
+
+
                         از این به بعد کارهای
-                        {'   '}
+
                         <Animatedtext/>
+
+
                         رو به
-                        {'   '}
-                        <strong>
-                            ونار
-                        </strong>
-                        {'   '}
+
+
+                        <img src="/asset/icons/logo-white.png" alt=""
+                             style={{maxHeight: '9rem'}}/>
+
+
                         بسپار !
 
 
                     </p>
-
-                    <img src="/asset/icons/logo.png" alt="" style={{marginLeft: 0, marginRight: 'auto'}}/>
 
 
                 </div>
@@ -35,7 +50,7 @@ const Footer = () => {
                     <div className='column is-4 htc p-2 '>
                         <h5 className='has-text-weight-bold is-size-5 has-text-white mb-3 borderclrthree pb-3 '>ونار</h5>
                         <p>
-                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
                             چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
                         </p>
 
@@ -51,7 +66,8 @@ const Footer = () => {
                                 </li>
 
                                 <li className='my-2 '><Link to={'/'}
-                                                            className='has-text-white is-align-items-centeris-align-items-centeris-align-items-centerfooterhover  '> خدمات ما</Link>
+                                                            className='has-text-white is-align-items-centeris-align-items-centeris-align-items-centerfooterhover  '> خدمات
+                                    ما</Link>
                                 </li>
 
                                 <li className='my-2 '><Link to={'/'}
@@ -59,7 +75,8 @@ const Footer = () => {
                                 </li>
 
                                 <li className='my-2 '><Link to={'/'}
-                                                            className='has-text-white footerhover  '> ثبت نام استادکاران</Link>
+                                                            className='has-text-white footerhover  '> ثبت نام
+                                    استادکاران</Link>
                                 </li>
 
                             </ul>

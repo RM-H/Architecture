@@ -16,7 +16,7 @@ const RegisterPage = () => {
             <>
 
 
-                <p className='kook is-size-4'>
+                <p className='yekan is-size-4'>
 
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
                     از
@@ -43,7 +43,7 @@ const RegisterPage = () => {
 
 
                 </p>
-                <Button variant='contained' onClick={() => setShow(true)} className="kook my-3">ادامه </Button>
+                <Button variant='contained' onClick={() => setShow(true)} className="yekan my-3">ادامه </Button>
             </>
     }
     return (

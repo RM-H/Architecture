@@ -3,16 +3,16 @@
 /*-----------------*/
 
 @font-face {
-    font-family: 'kook';
-    src: url("/asset/fonts/Kook-Regular.ttf");
+    font-family: 'yekan';
+    src: url("/asset/fonts/iranyekanwebregular.woff");
 }
 
-.kook {
-    font-family: 'kook' !important;
+.yekan {
+    font-family: 'yekan' !important;
 }
 
 body {
-    font-family: 'kook';
+    font-family: 'yekan';
 
 }
 
@@ -30,6 +30,7 @@ body {
 .main-layout {
     height: 100dvh;
     width: 100dvw;
+
 }
 
 .columns {
@@ -38,6 +39,7 @@ body {
 
 .column {
     padding: 0;
+
 }
 
 .navbar {
@@ -46,7 +48,7 @@ body {
 }
 
 .w100 {
-    width: 100%;
+    width: 100% !important;
 }
 
 
@@ -54,7 +56,7 @@ body {
 /*  backgrounds     */
 /*----------------*/
 .header {
-    height: 81dvh;
+    min-height: 81dvh;
     background-image: url('/asset/images/1.jpg');
     background-size: cover;
 
@@ -86,6 +88,10 @@ body {
     --clrfour: rgb(102 102 102 / 54%);
     --clrfive: rgba(255, 255, 255, 0.9);
     --clrsix: #31C1A0;
+
+
+    --clrseven: #00582a;
+    --clreight: #b0a159
 }
 
 
@@ -130,22 +136,39 @@ body {
     color: var(--clrsix);
 }
 
+.bgclrseven {
+    background-color: var(--clrseven) !important;
+}
+
+.textclrseven {
+    color: var(--clrseven);
+}
+
+.bgclreight {
+    background-color: var(--clreight) !important;
+}
+
+.textclreight {
+    color: var(--clreight);
+}
+
+
 /*----------------*/
 /*  Animations    */
 /*----------------*/
 
-@keyframes scroll{
-    from{
+@keyframes scroll {
+    from {
         /*opacity: 0;*/
-        scale: 0;
+        scale: 0.75;
     }
-    to{
+    to {
         /*opacity: 1;*/
         scale: 1;
     }
 }
 
-.section-animation{
+.section-animation {
     animation: scroll linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
@@ -162,7 +185,7 @@ body {
 .underline {
     &::after {
         content: "";
-        border-bottom: solid 0.1618rem var(--clrsix);
+        border-bottom: solid 0.1618rem var(--clrseven);
 
         position: absolute;
         bottom: 0;
@@ -192,7 +215,7 @@ body {
 
 
 /*----------------*/
-/*  Borders    */
+/*  Borders and margins   */
 /*----------------*/
 
 
@@ -204,29 +227,44 @@ body {
 .borderradone {
     border-radius: 0.3rem;
 }
+
 .borderradtwo {
     border-radius: 0.9rem;
 }
 
 .borderradleft {
-    border-radius:   1.9rem 0.9rem 0.9rem 1.9rem;
+    border-radius: 1.9rem 0.9rem 0.9rem 1.9rem;
 
 }
+
 .borderradright {
     border-radius: 0.9rem 1.9rem 1.9rem 0.9rem;
 }
 
 
 .borderbotblack {
-    border-bottom: 3px solid var(--clrsix);
+    border-bottom: 3px solid var(--clrseven);
 }
 
 .borderclrsix {
     border: 1px solid var(--clrsix);
 }
+.borderclrseven {
+    border: 1px solid var(--clrseven);
+}
+.borderclreight {
+    border: 1px solid var(--clreight);
+}
 
 .borderclrthree {
     border-bottom: 3px solid var(--clrthree);
+}
+
+
+
+
+.mt-10{
+    margin-top: 10rem;
 }
 
 
@@ -236,11 +274,12 @@ body {
 
 
 .banner {
-    min-height: 10rem;
+    min-height: 16rem;
     width: 66%;
     margin-top: 15rem;
-    background-color: rgb(102 102 102 / 60%);
+    background-color: rgb(102 102 102 / 70%);
     backdrop-filter: blur(0.3rem);
+    border-radius: 1rem;
 }
 
 .abilities-content__img {
@@ -265,10 +304,44 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    backdrop-filter: blur(1rem);
+    padding-bottom: 8rem;
 }
 
 .how-it-work__box-item {
     flex-grow: 1;
     padding: 3rem;
     background-color: var(--clrtwo);
+}
+
+
+
+/*----------------*/
+/*  responsive    */
+/*----------------*/
+
+@media screen and (min-width: 100px) and (max-width: 435px) {
+    .header {
+        min-height: 81dvh;
+        background-image: url('/asset/images/1.jpg');
+        background-size: cover;
+        position: relative;
+        padding-top: 6rem;
+
+
+
+        background-attachment: fixed;
+    }
+
+    .banner {
+        min-height: 16rem;
+        width: 66%;
+        margin-top: 0rem;
+
+        top: 10%;
+        background-color: rgb(102 102 102 / 70%);
+        backdrop-filter: blur(0.3rem);
+        border-radius: 1rem;
+    }
+
 }

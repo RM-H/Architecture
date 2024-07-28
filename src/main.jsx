@@ -4,6 +4,7 @@ import Mainlayout from './Layouts/Mainlayout.jsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {Contact, Landing, Register} from './Pages'
 import 'animate.css';
+import {createTheme, ThemeProvider} from "@mui/material";
 
 const router = createBrowserRouter([
     {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
             {
                 path: '/register/',
                 element: <Register/>
-            } ,
+            },
             {
                 path: '/contact/',
                 element: <Contact/>
@@ -32,11 +33,31 @@ const router = createBrowserRouter([
 ])
 
 
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: '#00582a'
+        },
+        secondary: {
+            main: '#b0a159'
+        }
+    } ,
+    typography:{
+        fontFamily:'yekan'
+    }
+});
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <RouterProvider router={router}>
-            <Mainlayout/>
-        </RouterProvider>
+        <ThemeProvider theme={theme}>
+            <RouterProvider router={router}>
+
+
+                <Mainlayout/>
+
+            </RouterProvider>
+        </ThemeProvider>
 
 
     </React.StrictMode>,

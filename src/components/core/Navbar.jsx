@@ -41,7 +41,7 @@ const Navbar = (props) => {
                 nav('/');
                 handleActivePage(0)
                 handleDrawerToggle()
-            }} className='kook has-text-weight-bold textclrone' variant="h6" sx={{my: 2}}>
+            }} className='yekan has-text-weight-bold textclrone' variant="h6" sx={{my: 2}}>
                 خانه
             </Typography>
 
@@ -65,7 +65,7 @@ const Navbar = (props) => {
                         handleActivePage(1)
                     }}
                                     sx={{textAlign: 'center', height: '3rem'}}>
-                        <Typography className='kook' variant="h6" sx={{my: 2}}>
+                        <Typography className='yekan' variant="h6" sx={{my: 2}}>
                            خدمات ما
                         </Typography>
                     </ListItemButton>
@@ -88,7 +88,7 @@ const Navbar = (props) => {
                         nav('/contact/');
                         handleActivePage(3)
                     }} sx={{textAlign: 'center', height: '3rem'}}>
-                        <Typography className='kook' variant="h6" sx={{my: 2}}>
+                        <Typography className='yekan' variant="h6" sx={{my: 2}}>
                            ارتباط با ما
                         </Typography>
                     </ListItemButton>
@@ -98,7 +98,7 @@ const Navbar = (props) => {
                         nav('/register/');
                         handleActivePage(4)
                     }} sx={{textAlign: 'center', height: '3rem'}}>
-                        <Typography className='kook' variant="h6" sx={{my: 2}}>
+                        <Typography className='yekan' variant="h6" sx={{my: 2}}>
                            ثبت نام استادکاران
                         </Typography>
                     </ListItemButton>
@@ -168,9 +168,9 @@ const Navbar = (props) => {
                                     onClick={handleDrawerToggle}
                                     sx={{ml: 1, display: {lg: 'none'}}}
                                 >
-                                    <Menu/>
+                                    {/*<Menu/>*/}
                                     {/*responsive logo*/}
-                                    <img className='mr-1' src="/asset/icons/logo.png" width={40} height={30} alt=""/>
+                                    <img className='mr-1' src="/asset/icons/logo.png" style={{maxWidth:'6rem' , maxHeight:"4rem"}} alt=""/>
                                 </IconButton>
 
 

@@ -19,7 +19,7 @@ const ContactMap = () => {
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
                     <Marker position={position}>
-                        <Popup className='kook'>
+                        <Popup className=''>
                             {data}
                         </Popup>
                     </Marker>
