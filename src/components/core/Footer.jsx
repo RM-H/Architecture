@@ -48,7 +48,7 @@ const Footer = () => {
 
                 <div className="container columns mx-auto">
                     <div className='column is-4 htc p-2 '>
-                        <h5 className='has-text-weight-bold is-size-5 has-text-white mb-3 borderclrthree pb-3 '>ونار</h5>
+                        <h5 className='has-text-weight-bold is-size-5 has-text-white mb-3 borderbotclreight pb-3 '>ونار</h5>
                         <p>
                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
                             چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
@@ -57,7 +57,7 @@ const Footer = () => {
                     </div>
 
                     <div className='column is-4 htc p-2 '>
-                        <h5 className='has-text-weight-bold is-size-5 has-text-white mb-3 borderclrthree pb-3 '>لینک های
+                        <h5 className='has-text-weight-bold is-size-5 has-text-white mb-3 borderbotclreight pb-3 '>لینک های
                             سریع</h5>
                         <aside className='menu'>
                             <ul className=" ">
@@ -85,7 +85,7 @@ const Footer = () => {
                     </div>
 
                     <div className='column is-4 htc p-2 '>
-                        <h5 className='has-text-weight-bold is-size-5 has-text-white mb-3 borderclrthree pb-3 '>ارتباط
+                        <h5 className='has-text-weight-bold is-size-5 has-text-white mb-3 borderbotclreight pb-3 '>ارتباط
                             با ما</h5>
 
                         <aside className='menu'>

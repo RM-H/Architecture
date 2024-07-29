@@ -10,17 +10,17 @@ const Contact = () => {
                 <div className='columns   is-multiline mx-auto py-6 mt-3 '>
 
 
-                    <div className='column is-12 mt-6'>
+                    <div className='column w100 is-12 mt-6'>
 
                         {/*<img src={icon} alt="icon" style={{transform: 'translateY(1rem) translateX(1.6rem)'}}/>*/}
 
-                        <div className='bgclrone '>
-                            <p className="is-size-4 textclrsix has-text-centered">24/7</p>
+                        <div className='bgclrseven py-3 '>
+                            <p className="is-size-4 textclreight has-text-centered">24/7</p>
                             <p className="title has-text-centered textclrtwo ">تماس با ما</p>
                         </div>
 
 
-                        <p className='my-3 container'>
+                        <p className='my-4 container'>
 
                             جهت ارتباط با مجموعه ونار میتوانید از راه های ارتباطی زیر استفاده کنید.
 
@@ -33,7 +33,7 @@ const Contact = () => {
                    <ContactMap/>
 
 
-                    <div className='column is-12 mt-6 '>
+                    <div className='column is-12 my-6 pb-6 '>
 
 
 

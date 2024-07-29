@@ -29,7 +29,7 @@ body {
 
 .main-layout {
     height: 100dvh;
-    width: 100dvw;
+    /*width: 100dvw;*/
 
 }
 
@@ -254,6 +254,10 @@ body {
 }
 .borderclreight {
     border: 1px solid var(--clreight);
+}
+
+.borderbotclreight {
+    border-bottom: 3px solid var(--clreight);
 }
 
 .borderclrthree {

@@ -86,7 +86,7 @@ const Landing = () => {
                     <div className='column   is-12 py-3 '>
 
                         <div className='bgclrseven py-3'>
-                            <p className="is-size-4 textclrsix has-text-centered">ما چه کارهایی انجام میدهیم؟</p>
+                            <p className="is-size-4 textclreight has-text-centered">ما چه کارهایی انجام میدهیم؟</p>
                             <p className="title has-text-centered textclrtwo ">خدمات ما</p>
                         </div>
 
@@ -240,7 +240,7 @@ const Landing = () => {
 
                     <div className='column is-12 our-services   ' style={{width: '100%'}}>
                         <div className='bgclrseven py-3'>
-                            <p className="is-size-4 textclrsix has-text-centered">
+                            <p className="is-size-4 textclreight has-text-centered">
                                 ماچگونه کار میکنیم و مهارت های ما چیست ؟
                             </p>
                             <p className="title has-text-centered textclrtwo ">روش و مهارت های ما</p>
@@ -257,7 +257,7 @@ const Landing = () => {
                                         <QuestionAnswer className='is-size-1 textclreight'/>
                                     </div>
                                     <div className="how-it-work__box-content">
-                                        <p className="is-size-4 has-text-weight-bold title textclrsix">مشاوره رایگان</p>
+                                        <p className="is-size-4 has-text-weight-bold title textclrseven">مشاوره رایگان</p>
                                         <p className="">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
                                             از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
                                     </div>
@@ -268,7 +268,7 @@ const Landing = () => {
                                         <EditCalendar className='is-size-1 textclreight'/>
                                     </div>
                                     <div className="how-it-work__box-content">
-                                        <p className="is-size-4 has-text-weight-bold title textclrsix">امضای قرارداد</p>
+                                        <p className="is-size-4 has-text-weight-bold title textclrseven">امضای قرارداد</p>
                                         <p className="">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
                                             از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
                                     </div>
@@ -279,7 +279,7 @@ const Landing = () => {
                                         <Map className='is-size-1 textclreight'/>
                                     </div>
                                     <div className="how-it-work__box-content">
-                                        <p className="is-size-4 has-text-weight-bold title textclrsix">طراحی و طرح
+                                        <p className="is-size-4 has-text-weight-bold title textclrseven">طراحی و طرح
                                             ریز</p>
                                         <p className="">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
                                             از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
@@ -290,7 +290,7 @@ const Landing = () => {
                                         <HomeWork className='is-size-1 textclreight'/>
                                     </div>
                                     <div className="how-it-work__box-content">
-                                        <p className="is-size-4 has-text-weight-bold title textclrsix">شروع ساخت و
+                                        <p className="is-size-4 has-text-weight-bold title textclrseven">شروع ساخت و
                                             ساز</p>
                                         <p className="">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
                                             از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
@@ -306,7 +306,7 @@ const Landing = () => {
                                         <QuestionAnswer className='is-size-1 textclreight'/>
                                     </div>
                                     <div className="how-it-work__box-content">
-                                        <p className="is-size-4 has-text-weight-bold title textclrsix">معماری با شرایط
+                                        <p className="is-size-4 has-text-weight-bold title textclrseven">معماری با شرایط
                                             اقلیمی </p>
                                         <p className="">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
                                             از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
@@ -317,7 +317,7 @@ const Landing = () => {
                                         <EditCalendar className='is-size-1 textclreight'/>
                                     </div>
                                     <div className="how-it-work__box-content">
-                                        <p className="is-size-4 has-text-weight-bold title textclrsix">معماری کوردی </p>
+                                        <p className="is-size-4 has-text-weight-bold title textclrseven">معماری کوردی </p>
                                         <p className="">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
                                             از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
                                     </div>
@@ -327,7 +327,7 @@ const Landing = () => {
                                         <Map className='is-size-1 textclreight'/>
                                     </div>
                                     <div className="how-it-work__box-content">
-                                        <p className="is-size-4 has-text-weight-bold title textclrsix">طراحان و
+                                        <p className="is-size-4 has-text-weight-bold title textclrseven">طراحان و
                                             مهندسان </p>
                                         <p className="">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
                                             از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
@@ -338,7 +338,7 @@ const Landing = () => {
                                         <HomeWork className='is-size-1 textclreight'/>
                                     </div>
                                     <div className="how-it-work__box-content">
-                                        <p className="is-size-4 has-text-weight-bold title textclrsix"> کارگاه‌های
+                                        <p className="is-size-4 has-text-weight-bold title textclrseven"> کارگاه‌های
                                             معماری </p>
                                         <p className="">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
                                             از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>

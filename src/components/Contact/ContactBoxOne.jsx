@@ -103,7 +103,7 @@ const ContactBoxOne = () => {
                     </div>
 
 
-                    <div className='column is-8-desktop is-12-mobile is-12-tablet shadowone borderradright borderradone bgclrone p-5'>
+                    <div className='column is-8-desktop is-12-mobile is-12-tablet shadowone borderradright borderradone bgclrseven p-5'>
 
 
                         <h2 className='is-size-6-mobile is-size-5-desktop has-text-white mt-1 has-text-weight-bold'>
@@ -197,6 +197,7 @@ const ContactBoxOne = () => {
 
                                                         <Button
                                                             variant='contained'
+                                                            color='secondary'
                                                             className='yekan borderradone mt-1 has-text-weight-bold'
                                                             type="submit">ارسال پیام
                                                         </Button>

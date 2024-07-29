@@ -16,6 +16,7 @@ const Animatedtype = () => {
             fadeOut: true,
             loop: true,
             fadeOutDelay:500,
+            showCursor:false,
         });
 
         return () => {
