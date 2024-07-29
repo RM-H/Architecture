@@ -5,36 +5,44 @@ import {PhoneEnabled, Place} from '@mui/icons-material'
 const Footer = () => {
     return (
         <>
-            <footer className="w100 bgclrseven textclrtwo " style={{minHeight: "15rem"}}>
+            <footer className=" bgclrseven textclrtwo " style={{minHeight: "15rem"}}>
 
                 <div
-                    className='bgclreight px-3 mx-auto borderradtwo shadowone is-flex is-align-items-center '
-                    style={{width: '66%', minHeight: '6rem', transform: 'translateY(-4rem)'}}>
+                    className='bgclreight footersection px-3 mx-auto borderradtwo  shadowone  '
+                >
 
                     <img src="/asset/icons/logo-shape.png" alt=""
                          style={{
 
 
+
                              marginRight: 0,
-                             maxHeight: '9rem',
-                             transform: 'translateY(-4.5rem)',
+                             marginLeft:'',
+                             maxHeight: '6rem',
+                             transform: 'translateY(-3rem)',
 
                          }}/>
 
-                    <p className='is-size-3 has-text-weight-bold is-flex is-align-items-center mr-auto ml-auto'
+                    <p className='has-text-weight-bold has-text-centered mx-auto'
                     >
 
 
                         از این به بعد کارهای
 
+                        {'     '}
                         <Animatedtext/>
 
+                        {'     '}
 
                         رو به
 
 
-                        <img src="/asset/icons/logo-white.png" alt=""
-                             style={{maxHeight: '9rem'}}/>
+                        <strong>
+                            {'     '}
+                            ونار
+                            {'      '}
+
+                        </strong>
 
 
                         بسپار !
@@ -50,14 +58,15 @@ const Footer = () => {
                     <div className='column is-4 htc p-2 '>
                         <h5 className='has-text-weight-bold is-size-5 has-text-white mb-3 borderbotclreight pb-3 '>ونار</h5>
                         <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
                             چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
                         </p>
 
                     </div>
 
                     <div className='column is-4 htc p-2 '>
-                        <h5 className='has-text-weight-bold is-size-5 has-text-white mb-3 borderbotclreight pb-3 '>لینک های
+                        <h5 className='has-text-weight-bold is-size-5 has-text-white mb-3 borderbotclreight pb-3 '>لینک
+                            های
                             سریع</h5>
                         <aside className='menu'>
                             <ul className=" ">

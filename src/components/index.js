@@ -5,3 +5,7 @@ export {default as Animatedtext} from './core/AnimatedType.jsx';
 export {default as Animatedtexttags} from './core/AnimatedTypetags.jsx';
 export {default as ContactBoxone} from './Contact/ContactBoxOne.jsx';
 export {default as ContactMap} from './Contact/ContactMap.jsx';
+export {default as Services} from './Landing/Services.jsx';
+export {default as Tiles} from './Landing/Tiles.jsx';
+export {default as Abilities} from './Landing/Abilities.jsx';
+export {default as About} from './Landing/About.jsx';
