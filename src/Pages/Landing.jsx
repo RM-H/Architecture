@@ -1,6 +1,4 @@
-import {Button} from '@mui/material';
-import {QuestionAnswer, EditCalendar, Map, HomeWork} from '@mui/icons-material'
-import {Animatedtexttags, Services,Tiles,Abilities,About} from '../components'
+import {Animatedtexttags, Services, Tiles, Abilities, About} from '../components'
 
 
 const Landing = () => {
@@ -18,11 +16,10 @@ const Landing = () => {
                             className="p-3  textclrtwo mx-auto banner is-flex is-flex-direction-column is-justify-content-center is-align-items-center  shadowone animate__animated animate__zoomIn">
 
 
-
                             <p className='is-size-3 has-text-weight-bold'>
                                 درنهایت کیفیت فضاها مهمترین وظیفه معماری است...
                             </p>
-                            <p className='is-size-5' style={{textAlign:'justify'}}>
+                            <p className='is-size-5' style={{textAlign: 'justify'}}>
                                 دفتر معماری
                                 {'  '}
 
@@ -43,8 +40,6 @@ const Landing = () => {
                         <Animatedtexttags/>
 
 
-
-
                         <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="100%"
                              viewBox="0 0 1600 172" className="shape is-hidden-mobile">
                             <path style={{fill: "rgba(255, 255, 255, 0.24)"}}
@@ -57,21 +52,12 @@ const Landing = () => {
                     </div>
 
 
-
                     <About/>
 
                     <Services/>
 
                     <Tiles/>
                     <Abilities/>
-
-
-
-
-
-
-
-
 
 
                 </div>

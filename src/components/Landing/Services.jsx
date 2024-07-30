@@ -11,9 +11,9 @@ const Services = () => {
 
                 <section className=" section-animation">
                     <div className="container">
-                        <div className="abilities-content is-flex is-justify-content-center m-auto">
+                        <div className="abilities-content columns is-multiline is-flex is-justify-content-center m-auto">
                             <div
-                                className="is-flex is-flex-direction-column is-justify-content-space-between is-align-items-center">
+                                className="column is-12-mobile is-4-desktop is-flex is-flex-direction-column is-justify-content-space-between is-align-items-center">
                                 <div className="p-2 is-flex is-justify-content-left">
                                     <div className="has-text-left">
                                         <p className="borderbotblack is-size-5 has-text-weight-bold">طراحی</p>
@@ -47,11 +47,11 @@ const Services = () => {
                                         src="/asset/icons/icon3.png" alt=""/></div>
                                 </div>
                             </div>
-                            <div className="abilities-content__middel is-hidden-mobile">
+                            <div className="column is-12-mobile is-4-desktop abilities-content__middel">
                                 <img src="/asset/images/3.webp" alt=""/>
                             </div>
                             <div
-                                className="is-flex is-flex-direction-column is-justify-content-space-between is-align-items-center ">
+                                className="column is-12-mobile is-4-desktop is-flex is-flex-direction-column is-justify-content-space-between is-align-items-center ">
                                 <div className="p-2 is-flex">
                                     <div className="abilities-content__img has-text-centered"><img
                                         src="/asset/icons/icon4.png" alt=""/></div>

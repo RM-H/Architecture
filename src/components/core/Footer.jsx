@@ -5,7 +5,7 @@ import {PhoneEnabled, Place} from '@mui/icons-material'
 const Footer = () => {
     return (
         <>
-            <footer className=" bgclrseven textclrtwo " style={{minHeight: "15rem"}}>
+            <footer className="bgclrseven textclrtwo w100" style={{minHeight: "15rem"}}>
 
                 <div
                     className='bgclreight footersection px-3 mx-auto borderradtwo  shadowone  '
@@ -54,7 +54,7 @@ const Footer = () => {
                 </div>
 
 
-                <div className="container columns mx-auto">
+                <div className="container columns is-multiline mx-auto">
                     <div className='column is-4 htc p-2 '>
                         <h5 className='has-text-weight-bold is-size-5 has-text-white mb-3 borderbotclreight pb-3 '>ونار</h5>
                         <p>
@@ -124,12 +124,13 @@ const Footer = () => {
 
                     </div>
 
+
+                    <div className='column is-12 has-text-left is-size-6'>
+                        طراحی شده توسط من.
+                    </div>
+
                 </div>
 
-
-                <div className='has-text-left is-size-6 '>
-                    طراحی شده توسط من.
-                </div>
 
             </footer>
 

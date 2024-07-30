@@ -16,7 +16,7 @@ const RegisterPage = () => {
             <>
 
 
-                <p className='yekan is-size-4'>
+                <p className='yekan is-size-5'>
 
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
                     از
@@ -50,7 +50,7 @@ const RegisterPage = () => {
 
         <>
 
-            <div className="columns" style={{
+            <div className="columns m-0" style={{
                 minHeight: '100dvh',
                 textAlign: 'center',
                 backgroundImage: 'url(/asset/images/2.jpg)',
@@ -61,7 +61,7 @@ const RegisterPage = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
             }}>
-                <div className='column is-9 mt-6  bgclrtwo borderradone'>
+                <div className='column is-9 my-6 p-3  shadowone  bgclrtwo borderradtwo'>
                     {
                         content
                     }

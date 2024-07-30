@@ -3,7 +3,7 @@ import {Button} from "@mui/material";
 const Tiles = () => {
     return (
         <>
-            <div className='column  is-12 bgclreight  '>
+            <div className='column  is-12 bgclreight   '>
                 <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="100%"
                      viewBox="0 0 1600 172" className="shape-reverse">
                     <path style={{fill: "rgba(255, 255, 255, 0.24)"}}
@@ -15,29 +15,11 @@ const Tiles = () => {
                 </svg>
 
 
-                <section className="our-projects mt-0 pb-6  section-animation">
-                    <div className="container borderradone shadowone bgclrtwo p-6">
+                <section className="our-projects mt-0 pb-6   ">
+                    <div className="container borderradtwo shadowone bgclrtwo p-6">
                         <div className="columns align-items-center">
-                            <div className="column is-flex is-flex-direction-column justify-content-center ">
-                                <img src="/asset/images/about1.jpg" alt="" className="our-project__img"/>
-                                <div className="our-project__content-box has-text-centered">
-                                    {/*<p className="borderbotblack is-size-4 has-text-weight-bold ">فرصت های*/}
-                                    {/*    شغلی</p>*/}
-                                    <p className="our-project__caption mt-5">معماری هر دو فرایند و محصول برنامه
-                                        ریزی، طراحی و ساخت ساختمان ها و سایر ساختارهای فیزیکی است.</p>
-                                    <Button variant='contained' className="yekan mt-6">اطلاعات بیشتر</Button>
-                                </div>
-                            </div>
-                            <div className="column is-flex is-flex-direction-column justify-content-center">
-                                <div className="our-project__content-box has-text-centered">
-                                    {/*<p className="borderbotblack is-size-4 has-text-weight-bold ">درباره ما</p>*/}
-                                    <p className="our-project__caption mt-5">معماری هر دو فرایند و محصول برنامه
-                                        ریزی، طراحی و ساخت ساختمان ها و سایر ساختارهای فیزیکی است.</p>
-                                    <Button variant='contained' className="yekan mt-6">اطلاعات بیشتر</Button>
-                                </div>
-                                <img src="/asset/images/about2.jpg" alt="" className="our-project__img"/>
-                            </div>
-                            <div className="column is-flex is-flex-direction-column justify-content-center">
+                            <div
+                                className="column  section-animation is-flex is-flex-direction-column justify-content-center">
                                 <img src="/asset/images/about3.jpg" alt="" className="our-project__img"/>
                                 <div className="our-project__content-box has-text-centered">
                                     {/*<p className="borderbotblack is-size-4 has-text-weight-bold ">ما اجتماعی*/}
@@ -47,7 +29,34 @@ const Tiles = () => {
                                     <Button variant='contained' className="yekan mt-6">اطلاعات بیشتر</Button>
                                 </div>
                             </div>
-                            <div className="column is-flex is-flex-direction-column justify-content-center">
+                            <div
+                                className="column  section-animation is-flex is-flex-direction-column justify-content-center">
+
+                                <img src="/asset/images/about4.jpg" alt="" className="our-project__img"/>
+                                <div className="our-project__content-box has-text-centered">
+                                    {/*<p className="borderbotblack is-size-4 has-text-weight-bold ">درباره ما</p>*/}
+                                    <p className="our-project__caption mt-5">معماری هر دو فرایند و محصول برنامه
+                                        ریزی، طراحی و ساخت ساختمان ها و سایر ساختارهای فیزیکی است.</p>
+                                    <Button variant='contained' className="yekan mt-6">اطلاعات بیشتر</Button>
+                                </div>
+
+                            </div>
+                            <div
+                                className="column  section-animation is-flex is-flex-direction-column justify-content-center ">
+                                <img src="/asset/images/about3.jpg" alt="" className="our-project__img"/>
+                                <div className="our-project__content-box has-text-centered">
+                                    {/*<p className="borderbotblack is-size-4 has-text-weight-bold ">فرصت های*/}
+                                    {/*    شغلی</p>*/}
+                                    <p className="our-project__caption mt-5">معماری هر دو فرایند و محصول برنامه
+                                        ریزی، طراحی و ساخت ساختمان ها و سایر ساختارهای فیزیکی است.</p>
+                                    <Button variant='contained' className="yekan mt-6">اطلاعات بیشتر</Button>
+                                </div>
+                            </div>
+
+
+                            <div
+                                className="column  section-animation is-flex is-flex-direction-column justify-content-center">
+                                <img src="/asset/images/about4.jpg" alt="" className="our-project__img"/>
                                 <div className="our-project__content-box has-text-centered">
                                     {/*<p className="borderbotblack is-size-4 has-text-weight-bold ">پروژه های*/}
                                     {/*    من</p>*/}
@@ -55,7 +64,7 @@ const Tiles = () => {
                                         ریزی، طراحی و ساخت ساختمان ها و سایر ساختارهای فیزیکی است.</p>
                                     <Button variant='contained' className="yekan mt-6">اطلاعات بیشتر</Button>
                                 </div>
-                                <img src="/asset/images/about4.jpg" alt="" className="our-project__img"/>
+
                             </div>
                         </div>
                     </div>

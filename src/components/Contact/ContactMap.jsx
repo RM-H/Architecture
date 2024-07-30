@@ -9,10 +9,10 @@ const ContactMap = () => {
     return (
         <>
 
-            <div className='column is-12 mt-5 container shadowone borderclrsix borderradtwo' style={{height: '16.18rem'}}>
+            <div className='column is-12 mt-5 container p-3  ' style={{height: '16.18rem'}}>
 
 
-                <MapContainer ref={mapRef} className='shadowtwo' center={position} zoom={11.6} scrollWheelZoom={false}
+                <MapContainer ref={mapRef} className='shadowtwo borderclrsix borderradtwo shadowone' center={position} zoom={11.6} scrollWheelZoom={false}
                               style={{height: '100%', borderRadius: '0.9rem'}}>
                     <TileLayer
 

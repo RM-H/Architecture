@@ -14,12 +14,13 @@ const Abilities = () => {
                 </div>
 
 
-                <div className='container borderradone shadowone mb-6 my-3 pb-6 px-3'
+                <div className=' container borderradone shadowone mb-6 my-3 pb-6 px-3'
                      style={{backdropFilter: 'blur(0.6rem)', borderRadius: '3rem'}}>
 
                     <div
-                        className=" is-column-gap-2 py-3 is-flex is-align-items-center is-justify-content-space-between section-animation ">
-                        <div className="bgclrtwo shadowone borderclrsix borderradone has-text-centered">
+                        className="columns is-multiline py-3 is-flex is-flex-direction-row is-align-items-center is-justify-content-space-between section-animation ">
+                        <div
+                            className="bgclrtwo column mt-3 is-12-mobile is-3-desktop shadowone borderclrsix borderradone has-text-centered">
                             <div className="how-it-work__box-top mb-1 ">
                                 <QuestionAnswer className='is-size-1 textclreight'/>
                             </div>
@@ -29,8 +30,9 @@ const Abilities = () => {
                                     از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
                             </div>
                         </div>
-                        <div className="bgclrtwo shadowone borderclrsix borderradone has-text-centered "
-                             style={{marginTop: '8rem'}}>
+                        <div
+                            className="bgclrtwo column mt-10  is-12-mobile is-3-desktop shadowone borderclrsix borderradone has-text-centered "
+                            >
                             <div className="how-it-work__box-top mb-1 ">
                                 <EditCalendar className='is-size-1 textclreight'/>
                             </div>
@@ -40,8 +42,9 @@ const Abilities = () => {
                                     از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
                             </div>
                         </div>
-                        <div className="bgclrtwo shadowone borderclrsix borderradone has-text-centered "
-                             style={{marginTop: '8rem'}}>
+                        <div
+                            className="bgclrtwo column  mt-10 is-12-mobile is-3-desktop shadowone borderclrsix borderradone has-text-centered "
+                            >
                             <div className="how-it-work__box-top mb-1 ">
                                 <Map className='is-size-1 textclreight'/>
                             </div>
@@ -52,7 +55,8 @@ const Abilities = () => {
                                     از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
                             </div>
                         </div>
-                        <div className="bgclrtwo shadowone borderclrsix borderradone has-text-centered">
+                        <div
+                            className="bgclrtwo column mt-3 is-12-mobile is-3-desktop shadowone borderclrsix borderradone has-text-centered">
                             <div className="how-it-work__box-top mb-1 ">
                                 <HomeWork className='is-size-1 textclreight'/>
                             </div>
@@ -67,8 +71,9 @@ const Abilities = () => {
 
 
                     <div
-                        className=" is-column-gap-2 py-3 is-flex is-align-items-center is-justify-content-space-between section-animation ">
-                        <div className="bgclrtwo shadowone borderclrsix borderradone has-text-centered mt-10 ">
+                        className="columns is-multiline py-3 is-flex is-flex-direction-row is-align-items-center is-justify-content-space-between section-animation ">
+                        <div
+                            className="bgclrtwo column is-12-mobile is-3-desktop shadowone borderclrsix borderradone has-text-centered mt-10 ">
                             <div className="how-it-work__box-top mb-1 ">
                                 <QuestionAnswer className='is-size-1 textclreight'/>
                             </div>
@@ -79,7 +84,8 @@ const Abilities = () => {
                                     از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
                             </div>
                         </div>
-                        <div className="bgclrtwo shadowone borderclrsix borderradone has-text-centered ">
+                        <div
+                            className="bgclrtwo column mt-3 is-12-mobile is-3-desktop shadowone borderclrsix borderradone has-text-centered ">
                             <div className="how-it-work__box-top mb-1 ">
                                 <EditCalendar className='is-size-1 textclreight'/>
                             </div>
@@ -89,7 +95,8 @@ const Abilities = () => {
                                     از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
                             </div>
                         </div>
-                        <div className="bgclrtwo shadowone borderclrsix borderradone has-text-centered ">
+                        <div
+                            className="bgclrtwo column mt-3 is-12-mobile is-3-desktop shadowone borderclrsix borderradone has-text-centered ">
                             <div className="how-it-work__box-top mb-1 ">
                                 <Map className='is-size-1 textclreight'/>
                             </div>
@@ -100,7 +107,8 @@ const Abilities = () => {
                                     از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
                             </div>
                         </div>
-                        <div className="bgclrtwo shadowone borderclrsix borderradone has-text-centered mt-10">
+                        <div
+                            className="bgclrtwo column is-12-mobile is-3-desktop shadowone borderclrsix borderradone has-text-centered mt-10">
                             <div className="how-it-work__box-top mb-1 ">
                                 <HomeWork className='is-size-1 textclreight'/>
                             </div>
