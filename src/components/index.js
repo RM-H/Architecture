@@ -9,3 +9,5 @@ export {default as Services} from './Landing/Services.jsx';
 export {default as Tiles} from './Landing/Tiles.jsx';
 export {default as Abilities} from './Landing/Abilities.jsx';
 export {default as About} from './Landing/About.jsx';
+export {default as Login} from './Registeration/Login.jsx';
+export {default as Spinner} from './core/Spinner.jsx';

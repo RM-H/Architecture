@@ -1,19 +1,19 @@
 import {useState} from "react";
-import {Registerationform} from '../components'
+import {Registerationform, Spinner, Login} from '../components'
 import Registerform from "../components/Registeration/Registerationform.jsx";
 import {Button} from "@mui/material";
 
 
 const RegisterPage = () => {
 
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(0);
     let content
 
-    if (show) {
-        content = <Registerationform/>
-    } else {
-        content =
-            <>
+    if (show == 0) {
+        content = <>
+
+
+            <div className='column is-9 my-6 p-3  shadowone  bgclrtwo borderradtwo'>
 
 
                 <p className='yekan is-size-5'>
@@ -43,37 +43,46 @@ const RegisterPage = () => {
 
 
                 </p>
-                <Button variant='contained' onClick={() => setShow(true)} className="yekan my-3">ادامه </Button>
-            </>
-    }
-    return (
-
-        <>
-
-            <div className="columns m-0" style={{
-                minHeight: '100dvh',
-                textAlign: 'center',
-                backgroundImage: 'url(/asset/images/2.jpg)',
-                backgroundAttachment: 'fixed',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-            }}>
-                <div className='column is-9 my-6 p-3  shadowone  bgclrtwo borderradtwo'>
-                    {
-                        content
-                    }
-
-                </div>
+                <Button variant='contained' onClick={() => setShow(1)} className="yekan my-3">ادامه </Button>
 
 
             </div>
 
 
         </>
-    )
+    } else if (show == 1) {
+        content = <Login/>
+
+    }
+    return (
+
+        <>
+
+        <div className="columns m-0" style={{
+            minHeight: '100dvh',
+            textAlign: 'center',
+            backgroundImage: 'url(/asset/images/2.jpg)',
+            backgroundAttachment: 'fixed',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+        }}>
+
+
+            {
+                content
+            }
+
+
+
+
+        </div>
+
+
+</>
+)
 
 }
 export default RegisterPage;
