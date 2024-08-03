@@ -7,10 +7,10 @@ const Mainlayout = () => {
       <>
           <div className='main-layout'>
 
-              <Nav/>
+              {/*<Nav/>*/}
 
               <Outlet/>
-              <Footer/>
+              {/*<Footer/>*/}
 
 
 
