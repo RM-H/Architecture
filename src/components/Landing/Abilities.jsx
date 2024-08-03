@@ -14,7 +14,7 @@ const Abilities = () => {
                 </div>
 
 
-                <div className=' container borderradone shadowone mb-6 my-3 pb-6 px-3'
+                <div className='container borderradone shadowone mb-6 my-3 pb-6 px-3'
                      style={{backdropFilter: 'blur(0.6rem)', borderRadius: '3rem'}}>
 
                     <div

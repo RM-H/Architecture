@@ -71,7 +71,7 @@ const Login = () => {
     return (
         <>
 
-            <div className="main-login " style={{
+            <div className="main-login shadowone animate__animated animate__zoomIn" style={{
                 backgroundColor: 'rgba(9,9,9,0.6)',
                 backdropFilter: 'blur(0.1rem)'
             }}>

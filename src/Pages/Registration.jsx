@@ -1,10 +1,18 @@
-import {useState} from "react";
-import {Registerationform, Spinner, Login} from '../components'
-import Registerform from "../components/Registeration/Registerationform.jsx";
+import {useEffect, useState} from "react";
+import {Login} from '../components'
+
 import {Button} from "@mui/material";
+import {scrolltoTop} from '../Services/service.js'
 
 
 const RegisterPage = () => {
+
+
+    useEffect(() => {
+        scrolltoTop()
+
+
+    }, []);
 
     const [show, setShow] = useState(0);
     let content

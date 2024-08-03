@@ -20,6 +20,7 @@ import {getSplash, getCities} from '../../Services/service.js'
 
 import {useNavigate} from 'react-router-dom'
 import {Spinner} from "../index.js";
+import {toast} from "react-toastify";
 // import {saveUserinfo, getProvinces, getCities, editUserinfo} from '../services/service.js'
 // import {toast} from "react-toastify";
 // import {Spinner} from '../components/index.js'
@@ -73,10 +74,10 @@ const Registerform = () => {
 
 
     const handlesubmit = async (val, avatar, nc, shenas) => {
-
         const formdata = new FormData()
+        formdata.append('token', localStorage.getItem('craftsman'))
         formdata.append('name', val.name)
-        formdata.append('family', val.family)
+        formdata.append('family', val.lastName)
         formdata.append('province_id', val.province_id)
         formdata.append('city_id', val.city_id)
         formdata.append('category_id', val.category_id)
@@ -87,6 +88,14 @@ const Registerform = () => {
         formdata.append('shenas_pic', shenas)
 
 
+        if (nc == '' || shenas == '') {
+            toast.error('تصویر کارت ملی یا شناسنامه انتخاب نشده است.')
+        } else {
+            console.log(val)
+
+        }
+
+
     }
 
 
@@ -94,12 +103,11 @@ const Registerform = () => {
 
         firstName: yup.string().max(25, 'نام بصورت صحیح وارد نشده').required('ضروری'),
         lastName: yup.string().max(40, ' باید کوتاه تر باشد').required('ضروری'),
-
-
-        tel: yup.string().required('ضروری'),
-        nc: yup.string().required('ضروری').length(10),
-        province: yup.number().required('ضروری'),
-        city: yup.number().required('ضروری'),
+        province_id: yup.number().required('ضروری'),
+        city_id: yup.number().required('ضروری'),
+        category_id: yup.number().required('ضروری'),
+        address: yup.string().max(500, 'بیش از حد طولانی است').required('ضروری'),
+        about: yup.string().max(500, 'بیش از حد طولانی است').required('ضروری'),
 
 
     });
@@ -111,18 +119,18 @@ const Registerform = () => {
         initialValues: {
             firstName: '',
             lastName: '',
+            province_id: '',
+            city_id: '',
 
-            category: 1,
+            category_id: '',
+            address: '',
+            about: '',
 
-            nc: '',
-            province: '',
-            city: '',
-            password: ''
 
         },
-        validationSchema: validationSchema,
+        // validationSchema: validationSchema,
         onSubmit: (values) => {
-            handlesubmit(values)
+            handlesubmit(values, avatar, ncpic, shenasname)
 
         },
     });
@@ -130,7 +138,7 @@ const Registerform = () => {
 
     return (
         <>
-            <main>
+            <div className='column is-12 container py-6'>
 
 
                 <Grid container className='animate__animated animate__zoomIn' sx={{
@@ -213,63 +221,17 @@ const Registerform = () => {
 
                                         {/*row 2*/}
 
-                                        <Grid xs={12} sm={6}>
-                                            <FormControl className='w100' variant="outlined">
-
-                                                <span className='yekan'> شماره تلفن :  </span>
-                                                <TextField
-                                                    id="tel"
-                                                    name='tel'
-                                                    value={formik.values.tel}
-                                                    onChange={formik.handleChange}
-                                                    onBlur={formik.handleBlur}
-
-                                                    error={formik.touched.tel && Boolean(formik.errors.tel)}
-
-
-                                                    helperText={formik.touched.tel && formik.errors.tel}
-
-                                                />
-
-
-                                            </FormControl>
-                                        </Grid>
-
-                                        <Grid xs={12} sm={6}>
-                                            <FormControl className='w100' variant="outlined">
-
-                                                <span className='yekan'> کد ملی :  </span>
-                                                <TextField
-                                                    id="nc"
-                                                    name='nc'
-
-                                                    value={formik.values.nc}
-                                                    onChange={formik.handleChange}
-                                                    onBlur={formik.handleBlur}
-
-                                                    error={formik.touched.nc && Boolean(formik.errors.nc)}
-
-
-                                                    helperText={formik.touched.nc && formik.errors.nc}
-
-
-                                                />
-
-
-                                            </FormControl>
-                                        </Grid>
-
 
                                         <Grid xs={12} sm={6}>
                                             <FormControl className='yekan w100' variant="outlined">
 
                                                 <span className='yekan'> استان :  </span>
                                                 <Select
-                                                    id="province"
-                                                    name='province'
+                                                    id="province_id"
+                                                    name='province_id'
                                                     className='yekan'
 
-                                                    value={formik.values.province}
+                                                    value={formik.values.province_id}
                                                     onChange={(e) => {
                                                         formik.handleChange(e);
                                                         setselectedProvinces(e.target.value)
@@ -277,10 +239,10 @@ const Registerform = () => {
                                                     }}
                                                     onBlur={formik.handleBlur}
 
-                                                    error={formik.touched.province && Boolean(formik.errors.province)}
+                                                    error={formik.touched.province_id && Boolean(formik.errors.province_id)}
 
 
-                                                    helperText={formik.touched.province && formik.errors.province}
+                                                    helperText={formik.touched.province_id && formik.errors.province_id}
                                                 >
                                                     <MenuItem className='yekan' value="">
                                                         <em>انتخاب کنید</em>
@@ -312,18 +274,18 @@ const Registerform = () => {
                                                 <Select
 
 
-                                                    id="city"
-                                                    name='city'
+                                                    id="city_id"
+                                                    name='city_id'
                                                     className='yekan'
 
-                                                    value={formik.values.city}
+                                                    value={formik.values.city_id}
                                                     onChange={formik.handleChange}
                                                     onBlur={formik.handleBlur}
 
-                                                    error={formik.touched.city && Boolean(formik.errors.city)}
+                                                    error={formik.touched.city_id && Boolean(formik.errors.city_id)}
 
 
-                                                    helperText={formik.touched.city && formik.errors.city}
+                                                    helperText={formik.touched.city_id && formik.errors.city_id}
                                                 >
                                                     <MenuItem className='yekan' value="">
                                                         <em>انتخاب کنید</em>
@@ -348,25 +310,82 @@ const Registerform = () => {
                                             </FormControl>
                                         </Grid>
 
+                                        <Grid xs={12} sm={6}>
+                                            <FormControl className='w100' variant="outlined">
+
+                                                <span className='yekan'> آدرس :  </span>
+                                                <TextField
+                                                    className='yekan'
+                                                    id="address"
+                                                    name='address'
+                                                    multiline
+                                                    minRows='4'
+
+                                                    value={formik.values.address}
+                                                    onChange={formik.handleChange}
+                                                    onBlur={formik.handleBlur}
+
+                                                    error={formik.touched.address && Boolean(formik.errors.address)}
+
+
+                                                    helperText={formik.touched.address && formik.errors.address}
+
+
+                                                />
+
+
+                                            </FormControl>
+                                        </Grid>
+
+
+                                        <Grid xs={12} sm={6}>
+                                            <FormControl className='w100' variant="outlined">
+
+                                                <span className='yekan'> درباره من :  </span>
+                                                <TextField
+                                                    className='yekan'
+                                                    id="about"
+                                                    name='about'
+                                                    multiline
+                                                    minRows='4'
+
+
+                                                    value={formik.values.about}
+                                                    onChange={formik.handleChange}
+                                                    onBlur={formik.handleBlur}
+
+                                                    error={formik.touched.about && Boolean(formik.errors.about)}
+
+
+                                                    helperText={formik.touched.about && formik.errors.about}
+
+
+                                                />
+
+
+                                            </FormControl>
+                                        </Grid>
+
 
                                         <Grid xs={12} sm={6}>
                                             <FormControl className='w100' variant="outlined">
 
                                                 <span className='yekan'> حوزه فعالیت :  </span>
                                                 <Select
+                                                    className='yekan'
 
 
-                                                    id="city"
-                                                    name='city'
+                                                    id="category_id"
+                                                    name='category_id'
 
-                                                    value={formik.values.city}
+                                                    value={formik.values.category_id}
                                                     onChange={formik.handleChange}
                                                     onBlur={formik.handleBlur}
 
-                                                    error={formik.touched.city && Boolean(formik.errors.city)}
+                                                    error={formik.touched.category_id && Boolean(formik.errors.category_id)}
 
 
-                                                    helperText={formik.touched.city && formik.errors.city}
+                                                    helperText={formik.touched.category_id && formik.errors.category_id}
                                                 >
                                                     <MenuItem className='yekan' value="">
                                                         <em>انتخاب کنید</em>
@@ -398,7 +417,7 @@ const Registerform = () => {
                                                 <span className='yekan'> تصویر :  </span>
                                                 <img
                                                     src={avatar == '' ? '/asset/images/placeholder-person.jpg' : URL.createObjectURL(avatar)}
-                                                    alt="avatar" width='31%'/>
+                                                    alt="avatar" width='31%' style={{maxHeight: '9rem'}}/>
 
                                                 <input onChange={(e) => setAvatar(e.target.files[0])}
                                                        className='yekan input'
@@ -416,7 +435,7 @@ const Registerform = () => {
                                                 <span className='yekan'> کارت ملی :  </span>
                                                 <img
                                                     src={ncpic == '' ? '/asset/images/placeholder.png' : URL.createObjectURL(ncpic)}
-                                                    alt="NC pic" width='31%'/>
+                                                    alt="NC pic" width='31%' style={{maxHeight: '9rem'}}/>
 
                                                 <input onChange={(e) => setNcpic(e.target.files[0])}
                                                        className='yekan input'
@@ -433,39 +452,12 @@ const Registerform = () => {
                                                 <span className='yekan'> تصویر شناسنامه :  </span>
                                                 <img
                                                     src={shenasname == '' ? '/asset/images/placeholder.png' : URL.createObjectURL(shenasname)}
-                                                    alt="avatar" width='31%'/>
+                                                    alt="id card" width='31%' style={{maxHeight: '9rem'}}/>
 
                                                 <input onChange={(e) => setShenasname(e.target.files[0])}
                                                        className='yekan input'
                                                        type='file' id="img"
                                                        name="img"/>
-
-
-                                            </FormControl>
-                                        </Grid>
-
-
-                                        <Grid xs={12} sm={12}>
-                                            <FormControl className='w100' variant="outlined">
-
-                                                <span className='yekan'> درباره :  </span>
-                                                <TextField
-                                                    multiline
-                                                    rows={4}
-                                                    id="nc"
-                                                    name='nc'
-
-                                                    value={formik.values.nc}
-                                                    onChange={formik.handleChange}
-                                                    onBlur={formik.handleBlur}
-
-                                                    error={formik.touched.nc && Boolean(formik.errors.nc)}
-
-
-                                                    helperText={formik.touched.nc && formik.errors.nc}
-
-
-                                                />
 
 
                                             </FormControl>
@@ -492,7 +484,7 @@ const Registerform = () => {
                     </Grid>
 
                 </Grid>
-            </main>
+            </div>
 
 
         </>

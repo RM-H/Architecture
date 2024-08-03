@@ -137,32 +137,46 @@ body {
 /*----------------*/
 
 
+.dvh100 {
+    min-height: 100dvh;
+}
+
+
 /* HTML: <div class="loader"></div> */
 .loader1 {
     width: 40px;
     height: 40px;
     position: relative;
-    --c:no-repeat linear-gradient(var(--clreight) 0 0);
-    background:
-            var(--c) center/100% 10px,
-            var(--c) center/10px 100%;
+    --c: no-repeat linear-gradient(var(--clreight) 0 0);
+    background: var(--c) center/100% 10px,
+    var(--c) center/10px 100%;
 }
+
 .loader1:before {
-    content:'';
+    content: '';
     position: absolute;
     inset: 0;
-    background:
-            var(--c) 0    0,
-            var(--c) 100% 0,
-            var(--c) 0    100%,
-            var(--c) 100% 100%;
+    background: var(--c) 0 0,
+    var(--c) 100% 0,
+    var(--c) 0 100%,
+    var(--c) 100% 100%;
     background-size: 15.5px 15.5px;
-    animation: l16 1.5s infinite cubic-bezier(0.3,1,0,1);
+    animation: l16 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
 }
+
 @keyframes l16 {
-    33%  {inset:-10px;transform: rotate(0deg)}
-    66%  {inset:-10px;transform: rotate(90deg)}
-    100% {inset:0    ;transform: rotate(90deg)}
+    33% {
+        inset: -10px;
+        transform: rotate(0deg)
+    }
+    66% {
+        inset: -10px;
+        transform: rotate(90deg)
+    }
+    100% {
+        inset: 0;
+        transform: rotate(90deg)
+    }
 }
 
 
@@ -171,12 +185,14 @@ body {
     width: 0.8rem; /* Width of the scrollbar track */
     height: 0.6rem; /* Height of the scrollbar thumb */
 }
+
 /* Define the scrollbar track */
 ::-webkit-scrollbar-track {
     background-color: rgba(255, 255, 255, 0); /* Background color of the scrollbar track */
     border-radius: 0.3rem; /* Border radius of the scrollbar track */
 }
-/* Define the scrollbar thumb */ 
+
+/* Define the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
     background-color: var(--clreight); /* Background color of the scrollbar thumb */
     border-radius: 0.3rem; /* Border radius of the scrollbar thumb */
@@ -439,6 +455,29 @@ body {
 /*  misc    */
 /*----------------*/
 
+
+
+
+.service-prices-box {
+
+    min-height: 21rem;
+    width: 66%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.services-images {
+    max-height: 30rem;
+
+}
+
+
+
+.slidercontainer {
+    padding-top: 6rem;
+}
 
 .footersection {
     width: 60%;

@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import ReactDOM from 'react-dom/client'
 import Mainlayout from './Layouts/Mainlayout.jsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {Contact, Landing, Register, Registerform} from './Pages'
+import {Contact, Landing, Register, Registerform,Services} from './Pages'
 import 'animate.css';
 import {createTheme, ThemeProvider} from "@mui/material";
 
@@ -28,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: '/register/craftsman/',
                 element: <Registerform/>
+            } ,
+            {
+                path:'/our-services/' ,
+                element: <Services/>
             }
 
 

@@ -4,6 +4,13 @@ export const url = 'https://wenar.hemaseh.tv/api/v1'
 export const baseUrl = 'https://wenar.hemaseh.tv'
 
 
+
+
+export const scrolltoTop = () => {
+    window.scrollTo({behavior:'smooth', top:0})
+}
+
+
 // -------------------------------------registration
 
 

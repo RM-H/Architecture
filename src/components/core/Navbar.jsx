@@ -201,7 +201,7 @@ const Navbar = (props) => {
                                         <Home/>
                                        خانه
                                     </Link>
-                                    <Link title='خرید آنلاین بلیت همایش' to={'/'} onClick={() => {
+                                    <Link title='خرید آنلاین بلیت همایش' to={'/our-services/'} onClick={() => {
 
                                         handleActivePage(2)
                                     }

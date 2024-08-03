@@ -23,6 +23,7 @@
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.25.1",
     "react-toastify": "^10.0.5",
+    "swiper": "^11.1.9",
     "typed.js": "^2.1.0",
     "yup": "^1.4.0"
   },
