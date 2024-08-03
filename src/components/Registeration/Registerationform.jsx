@@ -15,9 +15,11 @@ import {
 import * as yup from "yup";
 
 import {useState, useEffect} from "react";
+import {getSplash,getCities} from '../../Services/service.js'
 
 
 import {useNavigate} from 'react-router-dom'
+import {Spinner} from "../index.js";
 // import {saveUserinfo, getProvinces, getCities, editUserinfo} from '../services/service.js'
 // import {toast} from "react-toastify";
 // import {Spinner} from '../components/index.js'
@@ -37,7 +39,7 @@ const Registerform = () => {
     const [img, setImg] = useState('')
 
     const getprovinces = async () => {
-        const response = await getProvinces()
+        const response = await getSplash()
         if (response.data.code === 1) {
             setProvinces(response.data)
         }
@@ -201,7 +203,7 @@ const Registerform = () => {
                             <Grid xs={12}>
 
 
-                                <form onSubmit={formik.handleSubmit} className='yekan-regular'>
+                                <form onSubmit={formik.handleSubmit} className='yekan'>
                                     <Grid container columnSpacing={3} rowSpacing={5} className='shadowone'
                                           sx={{
                                               '& .MuiInputBase-root': {fontFamily: 'yekan-reg'},
@@ -212,9 +214,9 @@ const Registerform = () => {
 
 
                                         <Grid xs={12} sm={6}>
-                                            <FormControl className='w100 yekan-regular' variant="outlined">
+                                            <FormControl className='w100 yekan' variant="outlined">
 
-                                                <span className='yekan-regular'> نام  :  </span>
+                                                <span className='yekan'> نام  :  </span>
                                                 <TextField
 
                                                     id="firstName"
@@ -238,7 +240,7 @@ const Registerform = () => {
                                         <Grid xs={12} sm={6}>
                                             <FormControl className='w100' variant="outlined">
 
-                                                <span className='yekan-regular'> نام خانوادگی :  </span>
+                                                <span className='yekan'> نام خانوادگی :  </span>
                                                 <TextField
                                                     id="lastName"
                                                     name='lastName'
@@ -263,7 +265,7 @@ const Registerform = () => {
                                         <Grid xs={12} sm={6}>
                                             <FormControl className='w100' variant="outlined">
 
-                                                <span className='yekan-regular'> شماره تلفن :  </span>
+                                                <span className='yekan'> شماره تلفن :  </span>
                                                 <TextField
                                                     id="tel"
                                                     name='tel'
@@ -285,7 +287,7 @@ const Registerform = () => {
                                         <Grid xs={12} sm={6}>
                                             <FormControl className='w100' variant="outlined">
 
-                                                <span className='yekan-regular'> کد ملی :  </span>
+                                                <span className='yekan'> کد ملی :  </span>
                                                 <TextField
                                                     id="nc"
                                                     name='nc'
@@ -308,12 +310,13 @@ const Registerform = () => {
 
 
                                         <Grid xs={12} sm={6}>
-                                            <FormControl className='w100' variant="outlined">
+                                            <FormControl className='yekan w100' variant="outlined">
 
-                                                <span className='yekan-regular'> استان :  </span>
+                                                <span className='yekan'> استان :  </span>
                                                 <Select
                                                     id="province"
                                                     name='province'
+                                                    className='yekan'
 
                                                     value={formik.values.province}
                                                     onChange={(e) => {
@@ -328,21 +331,21 @@ const Registerform = () => {
 
                                                     helperText={formik.touched.province && formik.errors.province}
                                                 >
-                                                    <MenuItem className='yekan-regular' value="">
+                                                    <MenuItem className='yekan' value="">
                                                         <em>انتخاب کنید</em>
                                                     </MenuItem>
-                                                    {/*{*/}
-                                                    {/*    provinces !== false ?*/}
-                                                    {/*        provinces.provinces.map((item) => (*/}
-                                                    {/*            <MenuItem key={item.id} value={item.id}*/}
-                                                    {/*                      className='yekan-regular'>*/}
-                                                    {/*                {item.name}*/}
-                                                    {/*            </MenuItem>*/}
-                                                    {/*        ))*/}
-                                                    {/*        :*/}
+                                                    {
+                                                        provinces !== false ?
+                                                            provinces.provinces.map((item) => (
+                                                                <MenuItem key={item.id} value={item.id}
+                                                                          className='yekan'>
+                                                                    {item.name}
+                                                                </MenuItem>
+                                                            ))
+                                                            :
 
-                                                    {/*        <Spinner/>*/}
-                                                    {/*}*/}
+                                                            <Spinner/>
+                                                    }
 
 
                                                 </Select>
@@ -354,7 +357,51 @@ const Registerform = () => {
                                         <Grid xs={12} sm={6}>
                                             <FormControl className='w100' variant="outlined">
 
-                                                <span className='yekan-regular'> شهر :  </span>
+                                                <span className='yekan'> شهر :  </span>
+                                                <Select
+
+
+                                                    id="city"
+                                                    name='city'
+                                                    className='yekan'
+
+                                                    value={formik.values.city}
+                                                    onChange={formik.handleChange}
+                                                    onBlur={formik.handleBlur}
+
+                                                    error={formik.touched.city && Boolean(formik.errors.city)}
+
+
+                                                    helperText={formik.touched.city && formik.errors.city}
+                                                >
+                                                    <MenuItem className='yekan' value="">
+                                                        <em>انتخاب کنید</em>
+                                                    </MenuItem>
+                                                    {
+                                                        cities !== false ?
+                                                            cities.cities.map((item) => (
+                                                                <MenuItem key={item.id} value={item.id}
+                                                                          className='yekan'>
+                                                                    {item.name}
+                                                                </MenuItem>
+                                                            ))
+                                                            :
+
+                                                            <Spinner/>
+                                                    }
+
+
+                                                </Select>
+
+
+                                            </FormControl>
+                                        </Grid>
+
+
+                                        <Grid xs={12} sm={6}>
+                                            <FormControl className='w100' variant="outlined">
+
+                                                <span className='yekan'> حوزه فعالیت :  </span>
                                                 <Select
 
 
@@ -370,64 +417,21 @@ const Registerform = () => {
 
                                                     helperText={formik.touched.city && formik.errors.city}
                                                 >
-                                                    <MenuItem className='yekan-regular' value="">
+                                                    <MenuItem className='yekan' value="">
                                                         <em>انتخاب کنید</em>
                                                     </MenuItem>
-                                                    {/*{*/}
-                                                    {/*    cities !== false ?*/}
-                                                    {/*        cities.cities.map((item) => (*/}
-                                                    {/*            <MenuItem key={item.id} value={item.id}*/}
-                                                    {/*                      className='yekan-regular'>*/}
-                                                    {/*                {item.name}*/}
-                                                    {/*            </MenuItem>*/}
-                                                    {/*        ))*/}
-                                                    {/*        :*/}
+                                                    {
+                                                        provinces !== false ?
+                                                            provinces.categories.map((item) => (
+                                                                <MenuItem key={item.id} value={item.id}
+                                                                          className='yekan'>
+                                                                    {item.name}
+                                                                </MenuItem>
+                                                            ))
+                                                            :
 
-                                                    {/*        <Spinner/>*/}
-                                                    {/*}*/}
-
-
-                                                </Select>
-
-
-                                            </FormControl>
-                                        </Grid>
-
-
-                                        <Grid xs={12} sm={6}>
-                                            <FormControl className='w100' variant="outlined">
-
-                                                <span className='yekan-regular'> حوزه فعالیت :  </span>
-                                                <Select
-
-
-                                                    id="city"
-                                                    name='city'
-
-                                                    value={formik.values.city}
-                                                    onChange={formik.handleChange}
-                                                    onBlur={formik.handleBlur}
-
-                                                    error={formik.touched.city && Boolean(formik.errors.city)}
-
-
-                                                    helperText={formik.touched.city && formik.errors.city}
-                                                >
-                                                    <MenuItem className='yekan-regular' value="">
-                                                        <em>انتخاب کنید</em>
-                                                    </MenuItem>
-                                                    {/*{*/}
-                                                    {/*    cities !== false ?*/}
-                                                    {/*        cities.cities.map((item) => (*/}
-                                                    {/*            <MenuItem key={item.id} value={item.id}*/}
-                                                    {/*                      className='yekan-regular'>*/}
-                                                    {/*                {item.name}*/}
-                                                    {/*            </MenuItem>*/}
-                                                    {/*        ))*/}
-                                                    {/*        :*/}
-
-                                                    {/*        <Spinner/>*/}
-                                                    {/*}*/}
+                                                            <Spinner/>
+                                                    }
 
 
                                                 </Select>
@@ -440,7 +444,7 @@ const Registerform = () => {
                                         <Grid xs={12} sm={6}>
                                             <FormControl className='w100' variant="outlined"
                                                          sx={{alignItems: 'center', justifyContent: 'baseline'}}>
-                                                <span className='yekan-regular'> تصویر :  </span>
+                                                <span className='yekan'> تصویر :  </span>
                                                 {/*<img*/}
                                                 {/*    src={img == '' ? reduxloading === false && `${baseurl}/${user.user.avatar}` : URL.createObjectURL(img)}*/}
                                                 {/*    alt="avatar" width='31%'/>*/}
@@ -458,7 +462,7 @@ const Registerform = () => {
                                         <Grid xs={12} sm={12}>
                                             <FormControl className='w100' variant="outlined">
 
-                                                <span className='yekan-regular'> درباره :  </span>
+                                                <span className='yekan'> درباره :  </span>
                                                 <TextField
                                                     multiline
                                                     rows={4}
@@ -485,7 +489,7 @@ const Registerform = () => {
                                         <Grid xs={12} sx={{display: 'flex', justifyContent: 'end'}}>
                                             {
                                                 loading ? <Spinner/> :
-                                                    <Button className='yekan-regular w100' type='submit'
+                                                    <Button className='yekan w100' type='submit'
                                                             variant="contained">ادامه</Button>
                                             }
 

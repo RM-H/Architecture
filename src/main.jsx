@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import ReactDOM from 'react-dom/client'
 import Mainlayout from './Layouts/Mainlayout.jsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {Contact, Landing, Register} from './Pages'
+import {Contact, Landing, Register, Registerform} from './Pages'
 import 'animate.css';
 import {createTheme, ThemeProvider} from "@mui/material";
 
@@ -18,11 +18,16 @@ const router = createBrowserRouter([
             },
             {
                 path: '/register/',
-                element: <Register/>
+                element: <Register/>,
+
             },
             {
                 path: '/contact/',
                 element: <Contact/>
+            } ,
+            {
+                path: '/register/craftsman/',
+                element: <Registerform/>
             }
 
 
@@ -41,9 +46,9 @@ const theme = createTheme({
         secondary: {
             main: '#b0a159'
         }
-    } ,
-    typography:{
-        fontFamily:'yekan'
+    },
+    typography: {
+        fontFamily: 'yekan'
     }
 });
 

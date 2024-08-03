@@ -86,7 +86,7 @@ body {
     margin: 10px auto;
     justify-content: center;
     display: block;
-    background-color: #E1C886;
+    background-color: var(--clreight);
     margin-top: 20px;
     font-size: 1em;
     font-weight: bold;

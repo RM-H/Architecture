@@ -1,8 +1,10 @@
-
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 import * as Yup from "yup";
+import {Spinner} from "../index.js";
+import {getCode, verifyCode} from '../../Services/service.js'
+import {toast} from "react-toastify";
 
 
 const Login = () => {
@@ -16,51 +18,54 @@ const Login = () => {
 
     const HandleLogin = async (v) => {
 
-        //
-        // if (phoneentered === false) {
-        //     const form = new FormData
-        //     form.append('phone', v.phone)
-        //     setLoading(true)
-        //     const res = await getSms(form)
-        //     if (res.data.code == 1) {
-        //         setphoneentered(true)
-        //         setLoading(false)
-        //         toast.success('کد ارسال شد')
-        //     } else {
-        //         toast.warning(res.data.error)
-        //     }
-        //
-        //
-        // } else {
-        //     const form = new FormData
-        //     form.append('phone', v.phone)
-        //     form.append('code', v.code);
-        //     setLoading(true)
-        //     let resp = await verifySmsCode(form)
-        //
-        //
-        //     if (resp.data.code == 1) {
-        //         const hashed = CryptoJS.AES.encrypt(JSON.stringify(resp.data.user.token), 'ats', toString())
-        //         localStorage.setItem('user', hashed)
-        //
-        //
-        //         dispatch(setuser(resp.data))
-        //         setLoading(false)
-        //
-        //
-        //         nav('/ats')
-        //         toast.success('با موفقیت وارد شدید')
-        //     } else {
-        //         setLoading(false)
-        //         setphoneentered(false)
-        //         toast.warning(resp.data.error)
-        //     }
-        //
-        // }
+        console.log(v)
+
+
+        if (phoneentered === false) {
+            const form = new FormData
+            form.append('phone', v.phone)
+            setLoading(true)
+            const res = await getCode(form)
+            if (res.data.code == 1) {
+                setphoneentered(true)
+                setLoading(false)
+                toast.success('کد ارسال شد')
+            } else {
+                toast.warning(res.data.error)
+            }
+
+
+        } else {
+            const form = new FormData
+            form.append('phone', v.phone)
+            form.append('code', v.code);
+            setLoading(true)
+            let resp = await verifyCode(form)
+
+
+            if (resp.data.code == 1) {
+
+                localStorage.setItem('craftsman', resp.data.user.token)
+                setLoading(false)
+
+
+
+                toast.success('با موفقیت وارد شدید')
+
+                if (resp.data.register==0) {
+                    nav('/register/craftsman/')
+                } else {
+                    toast.warning('this condition is not yet difined (Login page)')
+                }
+            } else {
+                setLoading(false)
+                setphoneentered(false)
+                toast.warning(resp.data.error)
+            }
+
+        }
 
     }
-
-
 
 
     return (
@@ -73,9 +78,9 @@ const Login = () => {
                 <input type="checkbox" id="chk" aria-hidden="true"/>
 
                 <div className="signup is-size-5 has-text-centered yekan-regular">
-                    <img className='mb-3' src="/asset/icons/logo-white.png" alt="" style={{maxHeight: '6rem'}} />
+                    <img className='mb-3' src="/asset/icons/logo-white.png" alt="" style={{maxHeight: '6rem'}}/>
                     <h2>
-                        به سامانه ثبت نام استادکاران ونار خوش آمدید.
+                        به سامانه استادکاران ونار خوش آمدید.
                     </h2>
 
                 </div>
@@ -109,13 +114,18 @@ const Login = () => {
                                 }
 
                                 <ErrorMessage component='span' className='has-text-danger yekan' name='pswd'/>
-                                <button disabled={loading} className='my-4' type='submit'>
-                                    {
-                                        loading ? <Spinner/> : phoneentered ? 'ورود' : 'ارسال کد'
-                                    }
+
+                                {
+                                    loading ? <Spinner/> :
+                                        <button disabled={loading} className='my-4 yekan' type='submit'>
+                                            {
+                                                phoneentered ? 'ورود' : 'ارسال کد'
+                                            }
 
 
-                                </button>
+                                        </button>
+                                }
+
 
                                 {
                                     phoneentered && <button onClick={() => {
