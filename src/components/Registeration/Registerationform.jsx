@@ -15,7 +15,7 @@ import {
 import * as yup from "yup";
 
 import {useState, useEffect} from "react";
-import {getSplash,getCities} from '../../Services/service.js'
+import {getSplash, getCities} from '../../Services/service.js'
 
 
 import {useNavigate} from 'react-router-dom'
@@ -35,8 +35,13 @@ const Registerform = () => {
     const [provinces, setProvinces] = useState(false)
     const [selectedprovinces, setselectedProvinces] = useState(false)
     const [cities, setCities] = useState(false)
-    // avatar
-    const [img, setImg] = useState('')
+
+
+    // avatar nc pic and shenasname
+    const [avatar, setAvatar] = useState('')
+    const [ncpic, setNcpic] = useState('')
+    const [shenasname, setShenasname] = useState('')
+
 
     const getprovinces = async () => {
         const response = await getSplash()
@@ -67,75 +72,19 @@ const Registerform = () => {
     const [loading, setLoading] = useState(false)
 
 
-    const handlesubmit = async (val) => {
+    const handlesubmit = async (val, avatar, nc, shenas) => {
 
-        // checking to see if NC pic is selected
-
-
-        // editing user info
-        // if (user && user.user.confirm == 2) {
-        //
-        //     const formdataedit = new FormData()
-        //
-        //     formdataedit.append('name', val.firstName)
-        //     formdataedit.append('family', val.lastName)
-        //
-        //     formdataedit.append('phone', val.tel)
-        //     formdataedit.append('password', val.password)
-        //     formdataedit.append('nc', val.nc)
-        //     formdataedit.append('province_id', val.province)
-        //     formdataedit.append('city_id', val.city)
-        //
-        //
-        //
-        //     formdataedit.append('token', user.user.token)
-        //
-        //
-        //     setLoading(true)
-        //     const response = await editUserinfo(formdataedit)
-        //     if (response.data.code == 1) {
-        //
-        //         toast.success('اطلاعات شخصی شما با موفقیت بروز شد')
-        //         localStorage.setItem('userinfo', JSON.stringify(response.data))
-        //         nav('/home/results')
-        //         setLoading(false)
-        //     } else {
-        //         toast.warning(response.data.error)
-        //         setLoading(false)
-        //     }
-        //
-        //
-        // } else {
-        //
-        //     const formdata = new FormData()
-        //
-        //     formdata.append('name', val.firstName)
-        //     formdata.append('family', val.lastName)
-        //
-        //     formdata.append('phone', val.tel)
-        //     formdata.append('password', val.password)
-        //     formdata.append('nc', val.nc)
-        //     formdata.append('province_id', val.province)
-        //     formdata.append('city_id', val.city)
-        //
-        //
-        //
-        //
-        //
-        //     setLoading(true)
-        //     const response = await saveUserinfo(formdata)
-        //     if (response.data.code == 1) {
-        //
-        //         toast.success('اطلاعات شخصی شما با موفقیت ثبت شد')
-        //         localStorage.setItem('userinfo', JSON.stringify(response.data))
-        //         nav('/home/results')
-        //         setLoading(false)
-        //     } else {
-        //         toast.warning(response.data.error)
-        //         setLoading(false)
-        //     }
-        //
-        // }
+        const formdata = new FormData()
+        formdata.append('name', val.name)
+        formdata.append('family', val.family)
+        formdata.append('province_id', val.province_id)
+        formdata.append('city_id', val.city_id)
+        formdata.append('category_id', val.category_id)
+        formdata.append('address', val.address)
+        formdata.append('about', val.about)
+        formdata.append('avatar', avatar)
+        formdata.append('nc_pic', nc)
+        formdata.append('shenas_pic', shenas)
 
 
     }
@@ -162,7 +111,9 @@ const Registerform = () => {
         initialValues: {
             firstName: '',
             lastName: '',
-            tel: '',
+
+            category: 1,
+
             nc: '',
             province: '',
             city: '',
@@ -445,11 +396,46 @@ const Registerform = () => {
                                             <FormControl className='w100' variant="outlined"
                                                          sx={{alignItems: 'center', justifyContent: 'baseline'}}>
                                                 <span className='yekan'> تصویر :  </span>
-                                                {/*<img*/}
-                                                {/*    src={img == '' ? reduxloading === false && `${baseurl}/${user.user.avatar}` : URL.createObjectURL(img)}*/}
-                                                {/*    alt="avatar" width='31%'/>*/}
+                                                <img
+                                                    src={avatar == '' ? '/asset/images/placeholder-person.jpg' : URL.createObjectURL(avatar)}
+                                                    alt="avatar" width='31%'/>
 
-                                                <input onChange={(e) => setImg(e.target.files[0])}
+                                                <input onChange={(e) => setAvatar(e.target.files[0])}
+                                                       className='yekan input'
+                                                       type='file' id="img"
+                                                       name="img"/>
+
+
+                                            </FormControl>
+                                        </Grid>
+
+
+                                        <Grid xs={12} sm={6}>
+                                            <FormControl className='w100' variant="outlined"
+                                                         sx={{alignItems: 'center', justifyContent: 'baseline'}}>
+                                                <span className='yekan'> کارت ملی :  </span>
+                                                <img
+                                                    src={ncpic == '' ? '/asset/images/placeholder.png' : URL.createObjectURL(ncpic)}
+                                                    alt="NC pic" width='31%'/>
+
+                                                <input onChange={(e) => setNcpic(e.target.files[0])}
+                                                       className='yekan input'
+                                                       type='file' id="img"
+                                                       name="img"/>
+
+
+                                            </FormControl>
+                                        </Grid>
+
+                                        <Grid xs={12} sm={6}>
+                                            <FormControl className='w100' variant="outlined"
+                                                         sx={{alignItems: 'center', justifyContent: 'baseline'}}>
+                                                <span className='yekan'> تصویر شناسنامه :  </span>
+                                                <img
+                                                    src={shenasname == '' ? '/asset/images/placeholder.png' : URL.createObjectURL(shenasname)}
+                                                    alt="avatar" width='31%'/>
+
+                                                <input onChange={(e) => setShenasname(e.target.files[0])}
                                                        className='yekan input'
                                                        type='file' id="img"
                                                        name="img"/>
