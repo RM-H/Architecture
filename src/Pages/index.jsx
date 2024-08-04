@@ -5,3 +5,4 @@ export {default as Registerform} from './Registerpage.jsx';
 export {default as Services} from './Services.jsx';
 export {default as Dashboard} from './Dashboard.jsx';
 export {default as Masterslist} from './Masterslist.jsx';
+export {default as MasterProfile} from './MasterProfile.jsx';
