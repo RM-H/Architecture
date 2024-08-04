@@ -11,3 +11,5 @@ export {default as Abilities} from './Landing/Abilities.jsx';
 export {default as About} from './Landing/About.jsx';
 export {default as Login} from './Registeration/Login.jsx';
 export {default as Spinner} from './core/Spinner.jsx';
+export {default as Certificate} from './Dashboard/Certificates.jsx';
+export {default as Mastercard} from './Masters/Mastercard.jsx';

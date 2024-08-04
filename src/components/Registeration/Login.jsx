@@ -53,7 +53,7 @@ const Login = () => {
                 toast.success('با موفقیت وارد شدید')
 
                 if (resp.data.register==0) {
-                    nav('/register/craftsman/')
+                    nav('/dashboard/')
                 } else {
                     toast.warning('this condition is not yet difined (Login page)')
                 }

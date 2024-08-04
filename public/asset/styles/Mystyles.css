@@ -141,6 +141,10 @@ body {
     min-height: 100dvh;
 }
 
+.h100 {
+    height: 100% ;
+}
+
 
 /* HTML: <div class="loader"></div> */
 .loader1 {
@@ -335,6 +339,13 @@ body {
 /*----------------*/
 /*  Animations    */
 /*----------------*/
+
+.dashboardhover:hover {
+    border: 1px solid var(--clrtwo);
+    transition: 0.3s ease-in-out;
+}
+
+
 
 @keyframes scroll {
     from {
