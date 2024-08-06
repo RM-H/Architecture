@@ -92,7 +92,7 @@ const Masterslist = () => {
 
                             <Stack className='mx-auto mt-4' spacing={2}>
 
-                                <Pagination count={6} color="primary" />
+                                <Pagination count={6} color="primary" dir='ltr'/>
 
                             </Stack>
 

@@ -167,7 +167,7 @@ const Services = () => {
 
 
                     <div className='column mt-3 is-12 is-flex is-justify-content-center'>
-                        <div className='service-prices-box borderradtwo shadowone bgclreight p-3'>
+                        <div className='service-prices-box w100 container borderradtwo shadowone bgclreight p-3'>
 
 
                             <article className='textclrtwo is-size-5 has-text-justified mb-4'>

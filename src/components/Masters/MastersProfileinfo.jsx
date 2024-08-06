@@ -155,7 +155,24 @@ const MastersProfileinfo = () => {
 
                             <div className='columns is-multiline  '>
                                 <div className='column is-4 p-4 has-text-centered '>
-                                    <div className='shadowone borderradtwo borderclrseven pb-3'>
+                                    <div className='shadowone borderradtwo  pb-3'>
+                                        <img src="/asset/images/5.jpg" alt="" className='shadowone borderradtwotop w100'
+                                             style={{maxHeight: '23rem'}}/>
+                                        <h4 className='my-2 has-text-right px-3'>
+                                            عنوان گواهینامه
+                                            <a className='is-float-left textclrseven' href="/asset/images/5.jpg"
+                                               target='_blank'>
+                                                <Download/>
+                                            </a>
+
+                                        </h4>
+
+                                    </div>
+
+                                </div>
+
+                                <div className='column is-4 p-4 has-text-centered '>
+                                    <div className='shadowone borderradtwo  pb-3'>
                                         <img src="/asset/images/5.jpg" alt="" className='shadowone borderradtwotop w100'
                                              style={{maxHeight: '23rem'}}/>
                                         <h4 className='my-2 has-text-right px-3'>
@@ -171,7 +188,7 @@ const MastersProfileinfo = () => {
 
                                 </div>
                                 <div className='column is-4 p-4 has-text-centered '>
-                                    <div className='shadowone borderradtwo borderclrseven pb-3'>
+                                    <div className='shadowone borderradtwo  pb-3'>
                                         <img src="/asset/images/5.jpg" alt="" className='shadowone borderradtwotop w100'
                                              style={{maxHeight: '23rem'}}/>
                                         <h4 className='my-2 has-text-right px-3'>
@@ -187,71 +204,7 @@ const MastersProfileinfo = () => {
 
                                 </div>
                                 <div className='column is-4 p-4 has-text-centered '>
-                                    <div className='shadowone borderradtwo borderclrseven pb-3'>
-                                        <img src="/asset/images/5.jpg" alt="" className='shadowone borderradtwotop w100'
-                                             style={{maxHeight: '23rem'}}/>
-                                        <h4 className='my-2 has-text-right px-3'>
-                                            عنوان گواهینامه
-                                            <a className='is-float-left textclrseven' href="/asset/images/5.jpg"
-                                               target='_blank'>
-                                                <Download/>
-                                            </a>
-
-                                        </h4>
-
-                                    </div>
-
-                                </div>
-                                <div className='column is-4 p-4 has-text-centered '>
-                                    <div className='shadowone borderradtwo borderclrseven pb-3'>
-                                        <img src="/asset/images/5.jpg" alt="" className='shadowone borderradtwotop w100'
-                                             style={{maxHeight: '23rem'}}/>
-                                        <h4 className='my-2 has-text-right px-3'>
-                                            عنوان گواهینامه
-                                            <a className='is-float-left textclrseven' href="/asset/images/5.jpg"
-                                               target='_blank'>
-                                                <Download/>
-                                            </a>
-
-                                        </h4>
-
-                                    </div>
-
-                                </div>
-                                <div className='column is-4 p-4 has-text-centered '>
-                                    <div className='shadowone borderradtwo borderclrseven pb-3'>
-                                        <img src="/asset/images/5.jpg" alt="" className='shadowone borderradtwotop w100'
-                                             style={{maxHeight: '23rem'}}/>
-                                        <h4 className='my-2 has-text-right px-3'>
-                                            عنوان گواهینامه
-                                            <a className='is-float-left textclrseven' href="/asset/images/5.jpg"
-                                               target='_blank'>
-                                                <Download/>
-                                            </a>
-
-                                        </h4>
-
-                                    </div>
-
-                                </div>
-                                <div className='column is-4 p-4 has-text-centered '>
-                                    <div className='shadowone borderradtwo borderclrseven pb-3'>
-                                        <img src="/asset/images/5.jpg" alt="" className='shadowone borderradtwotop w100'
-                                             style={{maxHeight: '23rem'}}/>
-                                        <h4 className='my-2 has-text-right px-3'>
-                                            عنوان گواهینامه
-                                            <a className='is-float-left textclrseven' href="/asset/images/5.jpg"
-                                               target='_blank'>
-                                                <Download/>
-                                            </a>
-
-                                        </h4>
-
-                                    </div>
-
-                                </div>
-                                <div className='column is-4 p-4 has-text-centered '>
-                                    <div className='shadowone borderradtwo borderclrseven pb-3'>
+                                    <div className='shadowone borderradtwo  pb-3'>
                                         <img src="/asset/images/5.jpg" alt="" className='shadowone borderradtwotop w100'
                                              style={{maxHeight: '23rem'}}/>
                                         <h4 className='my-2 has-text-right px-3'>

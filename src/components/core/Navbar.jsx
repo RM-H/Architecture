@@ -232,13 +232,23 @@ const Navbar = (props) => {
                                     </Link>
 
 
-                                    <Link title='پیگیری خرید بلیط با کد رهگیری' to={'/register/'} onClick={() => {
+                                    <Link title='پیگیری خرید بلیط با کد رهگیری' to={'/masters-list/'} onClick={() => {
 
                                         handleActivePage(5)
                                     }}
                                           className={`navbar-item  underline ${activePage === 5 && 'navactive'}`}>
                                         <AppRegistration/>
-                                       ثبت نام استادکاران
+                                         استادکاران
+                                    </Link>
+
+
+                                    <Link title='پیگیری خرید بلیط با کد رهگیری' to={'/register/'} onClick={() => {
+
+                                        handleActivePage(5)
+                                    }}
+                                          className={`navbar-item is-float-left underline ${activePage === 5 && 'navactive'}`}>
+                                        <AppRegistration/>
+                                       سامانه استادکاران
                                     </Link>
 
 

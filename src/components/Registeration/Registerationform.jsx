@@ -138,7 +138,7 @@ const Registerform = () => {
 
     return (
         <>
-            <div className='columns is-justify-content-center' style={{maxHeight: '90vh' , overflow: 'auto'}} >
+            <div className='columns is-justify-content-center' >
 
 
                 <div className='column is-10  py-6'>

@@ -4,7 +4,7 @@ import {Registerationform} from '../components'
 const Registerpage = () => {
     return (
         <>
-            <div className="py-6 m-0 columns is-multiline is-justify-content-center" style={{minHeight: '100dvh' ,  backgroundImage: 'url(/asset/images/2.jpg)',
+            <div className="py-6 m-0 columns is-multiline is-justify-content-center" style={{  backgroundImage: 'url(/asset/images/2.jpg)',
                 backgroundAttachment: 'fixed',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',}}>

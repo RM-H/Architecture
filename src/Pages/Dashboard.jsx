@@ -34,19 +34,19 @@ const Dashboard = () => {
 
   return(
       <>
-          <main className='dvh100'>
+          <main className='dvh100 pt-6'>
 
 
-                  <div className='columns mx-0  is-multiline   '>
+                  <div className='columns mx-0 pt-6  is-multiline   '>
 
                       <div
                           className='column is-3 bgclrseven has-text-white is-flex is-flex-direction-column is-align-items-center  ' style={{flexGrow:1}}>
 
                           <h2 className=' is-size-3-desktop'>
-                              تیکت آنلاین
+                              ایشیم
                           </h2>
 
-                          <ul className='w100 '>
+                          <ul className='w100' style={{position: 'sticky' , top:'10%'}}>
                               <li>
                                   <Button onClick={() => setActive(1)}
                                           className={`button yekan has-text-white is-size-6-desktop dashboardhover w100 is-justify-content-flex-start ${Active === 1 && 'bgclreight'} `}

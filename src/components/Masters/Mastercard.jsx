@@ -7,7 +7,7 @@ import {
     CardMedia,
     IconButton,
     Typography,
-    Button
+    Button, Rating
 
 } from "@mui/material";
 
@@ -23,22 +23,21 @@ const Mastercard = () => {
 
 
                 <Card className='shadowone borderclrsix' sx={{maxWidth: '100%'}}>
-                    <CardHeader
-                        avatar={
-                            <Avatar sx={{bgcolor: 'red'}} aria-label="recipe">
-                                R
-                            </Avatar>
-                        }
 
-                        title="آقای فلانی"
-                        subheader="September 14, 2016"
-                    />
+
                     <CardMedia
                         component="img"
                         height="194"
                         image="/asset/images/3.webp"
                         alt="Paella dish"
                     />
+                    <CardHeader
+
+
+                        title="آقای فلانی"
+                        subheader="کتگوری"
+                    />
+
                     <CardContent>
                         <Typography variant="body2" color="text.secondary">
                             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
@@ -48,27 +47,13 @@ const Mastercard = () => {
                         </Typography>
                     </CardContent>
                     <CardActions disableSpacing>
-                        <Button variant='contained' color='primary' className='ml-auto' >اطلاعات بیشتر</Button>
-                        <IconButton aria-label="add to favorites">
-                            <Favorite/>
-                        </IconButton>
-                        <IconButton aria-label="share">
-                            <Share/>
-                        </IconButton>
-
+                        <Button variant='contained' color='primary' className='ml-auto'>اطلاعات بیشتر</Button>
+                        <Rating readOnly  name="read-only" precision={0.5} value={3.5} sx={{direction: 'ltr'}} />
 
 
                     </CardActions>
-                    {/*<Collapse in={expanded} timeout="auto" unmountOnExit>*/}
-                    {/*    <CardContent>*/}
-                    {/*        <Typography paragraph>Method:</Typography>*/}
-                    {/*        <Typography paragraph>*/}
-                    {/*            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set*/}
-                    {/*            aside for 10 minutes.*/}
-                    {/*        </Typography>*/}
 
-                    {/*    </CardContent>*/}
-                    {/*</Collapse>*/}
+
                 </Card>
             </div>
 
