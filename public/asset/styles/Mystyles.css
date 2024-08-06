@@ -210,8 +210,8 @@ body {
 
 
 .main-layout {
-    height: 100dvh;
-    width: 100dvw;
+    /*height: 100dvh;*/
+    /*width: 100dvw;*/
 
 }
 
@@ -422,6 +422,11 @@ body {
     border-radius: 0.9rem;
 }
 
+.borderradtwotop {
+   border-top-left-radius: 0.9rem;
+    border-top-right-radius: 0.9rem;
+}
+
 .borderradleft {
     border-radius: 1.9rem 0.9rem 0.9rem 1.9rem;
 
@@ -466,6 +471,10 @@ body {
 /*  misc    */
 /*----------------*/
 
+
+.profile-banner {
+    height: 15rem;
+}
 
 
 

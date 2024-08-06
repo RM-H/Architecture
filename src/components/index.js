@@ -13,3 +13,4 @@ export {default as Login} from './Registeration/Login.jsx';
 export {default as Spinner} from './core/Spinner.jsx';
 export {default as Certificate} from './Dashboard/Certificates.jsx';
 export {default as Mastercard} from './Masters/Mastercard.jsx';
+export {default as MasterProfileInfo} from './Masters/MastersProfileinfo.jsx';

@@ -1,5 +1,6 @@
 import {Link, useParams} from 'react-router-dom'
 import {Breadcrumbs, Typography} from "@mui/material";
+import {MasterProfileInfo} from '../components'
 
 
 
@@ -11,10 +12,10 @@ const MasterProfile = () => {
   return(
       <>
           <main className="dvh100 py-6">
-              <div className="columns is-multiline">
-                  <div className='column is-12 w100'>
+              <div className="columns is-multiline py-6 ">
+                  <div className='column is-12 w100 '>
 
-                      <div className='bgclrseven py-3'>
+                      <div className='bgclrseven p-3'>
 
                           <p className='has-text-white my-2'>
                               شما اینجا هستید :
@@ -35,6 +36,19 @@ const MasterProfile = () => {
 
 
                   </div>
+
+
+
+                  <MasterProfileInfo/>
+
+
+
+
+
+
+
+
+
 
 
               </div>
